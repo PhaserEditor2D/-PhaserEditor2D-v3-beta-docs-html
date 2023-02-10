@@ -33,7 +33,7 @@
             <img src="../_static/logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v3.36.1
+                v3.60.0-beta
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -68,6 +68,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#rotate-tool">Rotate tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#origin-tool">Origin tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#resize-tool">Resize tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#slice-tool">Slice tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#polygon-tool">Polygon tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#arcade-physics-body-tool">Arcade Physics Body tool</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#select-region-tool">Select Region tool</a></li>
@@ -123,10 +124,11 @@
 <li><p><a class="reference internal" href="#rotate-tool" id="id5">Rotate tool</a></p></li>
 <li><p><a class="reference internal" href="#origin-tool" id="id6">Origin tool</a></p></li>
 <li><p><a class="reference internal" href="#resize-tool" id="id7">Resize tool</a></p></li>
-<li><p><a class="reference internal" href="#polygon-tool" id="id8">Polygon tool</a></p></li>
-<li><p><a class="reference internal" href="#arcade-physics-body-tool" id="id9">Arcade Physics Body tool</a></p></li>
-<li><p><a class="reference internal" href="#select-region-tool" id="id10">Select Region tool</a></p></li>
-<li><p><a class="reference internal" href="#pan-tool" id="id11">Pan tool</a></p></li>
+<li><p><a class="reference internal" href="#slice-tool" id="id8">Slice tool</a></p></li>
+<li><p><a class="reference internal" href="#polygon-tool" id="id9">Polygon tool</a></p></li>
+<li><p><a class="reference internal" href="#arcade-physics-body-tool" id="id10">Arcade Physics Body tool</a></p></li>
+<li><p><a class="reference internal" href="#select-region-tool" id="id11">Select Region tool</a></p></li>
+<li><p><a class="reference internal" href="#pan-tool" id="id12">Pan tool</a></p></li>
 </ul>
 </li>
 </ul>
@@ -168,8 +170,18 @@
 <p>This tool allows for changing the size of some objects like <a class="reference external" href="tile-sprite-object.html">TileSprite</a>, <a class="reference external" href="shape-object.html#rectangle">Rectangle</a>, and <a class="reference external" href="shape-object.html#ellipse">Ellipse</a>.  You can activate it in the context menu or with the <code class="docutils literal notranslate"><span class="pre">Z</span></code> key. Resize the object is not the same of scaling it.</p>
 <img alt="TileSprite size tool." src="../_images/scene-editor-tools-tilesprite-size-04262020.webp" />
 </section>
+<section id="slice-tool">
+<h2><a class="toc-backref" href="#id8">Slice tool</a><a class="headerlink" href="#slice-tool" title="Permalink to this headline"></a></h2>
+<p>This is a tool for changing the size of the slices of a <a class="reference external" href="nine-slice-object.html">NineSlice</a> object. You can activate it in the context menu, with the <strong>Tools → Slice Tool</strong> option. Or you can activate it in the Nine Slice properties section, by clicking the <strong>Edit Slices</strong> button:</p>
+<img alt="Activate the Slice tool." src="../_images/scene-editor-slice-tool-edit-button-20230208.webp" />
+<p>The tools shows four maniputaros for changing the size of the slices:</p>
+<img alt="Slice manipulators." src="../_images/scene-editor-slice-tool-manipulators-20230208.webp" />
+<p>If you want to change the width of the <strong>left</strong> and <strong>rigth</strong> slices at the same time and with the same value, you can press and hold the <code class="docutils literal notranslate"><span class="pre">Shift</span></code> key. It also applies to the height of the <strong>top</strong> and <strong>bottom</strong> slices.</p>
+<p>If the object is in a 3 slices mode, it only shows the manipulators for the width slices:</p>
+<img alt="Nine Slice with 3 slices mode." src="../_images/scene-editor-3-slice-tool-20230208.webp" />
+</section>
 <section id="polygon-tool">
-<h2><a class="toc-backref" href="#id8">Polygon tool</a><a class="headerlink" href="#polygon-tool" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id9">Polygon tool</a><a class="headerlink" href="#polygon-tool" title="Permalink to this headline"></a></h2>
 <p>The Polygon tool (that you can activate with the <code class="docutils literal notranslate"><span class="pre">Y</span></code> key) shows the polygon’s points in the scene. It allows you:</p>
 <ul class="simple">
 <li><p>Change the position of a point: drag the point with the mouse cursor.</p></li>
@@ -183,7 +195,7 @@
 <img alt="Add new point." src="../_images/scene-editor-polygon-add-point-2-20220623.webp" />
 </section>
 <section id="arcade-physics-body-tool">
-<h2><a class="toc-backref" href="#id9">Arcade Physics Body tool</a><a class="headerlink" href="#arcade-physics-body-tool" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id10">Arcade Physics Body tool</a><a class="headerlink" href="#arcade-physics-body-tool" title="Permalink to this headline"></a></h2>
 <p>This tool allows changing the size and offset of an Arcade physics body. You can activate the tool in the scene context menu of by pressing the <code class="docutils literal notranslate"><span class="pre">B</span></code> key.</p>
 <p>There are two type of bodies: circular and rectangular bodies. When you are editing a circular body, the tool shows the body’s circle, the center (offset), and the radius handlers:</p>
 <img alt="Editing the circular body." src="../_images/arcade-physics-body-circle-tool-20221005.webp" />
@@ -191,12 +203,12 @@
 <img alt="Editing the rectangular body." src="../_images/arcade-physics-tool-rect-body-20221006.webp" />
 </section>
 <section id="select-region-tool">
-<h2><a class="toc-backref" href="#id10">Select Region tool</a><a class="headerlink" href="#select-region-tool" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id11">Select Region tool</a><a class="headerlink" href="#select-region-tool" title="Permalink to this headline"></a></h2>
 <p>This tool allows you to draw a region in the scene and select all objects inside that zone. You can select it in the toolbar, the context menu or by pressing the <code class="docutils literal notranslate"><span class="pre">Shift+S</span></code> keys. If you keep pressing the <cite>Ctrl</cite> key, the previous selected objects will remain selected.</p>
 <img alt="Select objects in region tool." src="../_images/scene-editor-tools-select-region-06172020.webp" />
 </section>
 <section id="pan-tool">
-<h2><a class="toc-backref" href="#id11">Pan tool</a><a class="headerlink" href="#pan-tool" title="Permalink to this headline"></a></h2>
+<h2><a class="toc-backref" href="#id12">Pan tool</a><a class="headerlink" href="#pan-tool" title="Permalink to this headline"></a></h2>
 <p>This tool allows you to pan the scene. You can activate it with the <code class="docutils literal notranslate"><span class="pre">Space</span></code> key. When it is selected, the mouse cursor is shown with a “grabbing” icon, then you can click on the scene and drag it.</p>
 <p>Also, you can pan the scene by pressing the <code class="docutils literal notranslate"><span class="pre">Alt</span></code> key and dragging the mouse. This method does not require to activate the Pan tool.</p>
 </section>

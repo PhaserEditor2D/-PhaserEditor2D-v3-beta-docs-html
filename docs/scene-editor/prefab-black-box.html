@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Using a prefab as a black box &mdash; Phaser Editor 2D Help</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="User Components" href="user-components.html" />
+    <link rel="prev" title="Adding children to a prefab instance" href="prefab-instance-children.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+            <a href="../index.html" class="icon icon-home"> Phaser Editor 2D
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v3.36.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-steps/index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../asset-pack-editor/index.html">Asset Pack Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Scene Editor</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="create-new-scene-file.html">Create a new Scene file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add-object.html">Adding an object to the scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inspector-view.html">Inspector view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game-objects.html">Game Object types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-properties.html">Scene properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcade-physics.html">Arcade physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-with-parent-objects.html">Working with parent objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object-list.html">Object List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="display-list.html">Display List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input.html">Input</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="prefabs.html">Prefabs</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="prefab-new-file.html">Creating a prefab file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-object.html">The prefab object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-user-properties.html">Prefab user properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-create-instance.html">Creating a prefab instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-code.html">Prefab code generation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-set-properties.html">Changing a property of a prefab instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-variant.html">Prefab variants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-nested.html">Nested prefabs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-instance-children.html">Adding children to a prefab instance</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Using a prefab as a black box</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="user-components.html">User Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation-tools.html">Manipulation tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layout-tools.html">Layout tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-compiler.html">The scene compiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../code-editor/index.html">Code Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animations-editor/index.html">Animations Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas-editor/index.html">Atlas Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pricing/index.html">License and pricing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #343131" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Phaser Editor 2D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Scene Editor</a> &raquo;</li>
+          <li><a href="prefabs.html">Prefabs</a> &raquo;</li>
+      <li>Using a prefab as a black box</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="using-a-prefab-as-a-black-box">
+<h1>Using a prefab as a black box<a class="headerlink" href="#using-a-prefab-as-a-black-box" title="Permalink to this headline"></a></h1>
+<p>At this moment, the <a class="reference external" href="../scene-editor/index.html">Scene Editor</a> supports a small subset of the object types present in the <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/">Phaser API</a>. Eventually, we will implement support for all the built-in object types.</p>
+<p>However, if you need to add to the scene an object of an unsupported type (a <a class="reference external" href="https://phaser.io">Phaser</a> object type or any other no fully supported by <a class="reference external" href="https://phaser.io">Phaser</a>) you can “cheat” the <a class="reference external" href="../scene-editor/index.html">Scene Editor</a> using a <a class="reference external" href="../scene-editor/prefabs.html">prefab</a> as a black box.</p>
+<p>A <a class="reference external" href="../scene-editor/prefabs.html">prefab</a> as a black box is a very simple concept: it is a <a class="reference external" href="../scene-editor/prefabs.html">prefab</a> that is not compiled by the <a class="reference external" href="../scene-editor/scene-compiler.html">scene compiler</a>, so you should write the code of the <a class="reference external" href="../scene-editor/prefabs.html">prefab</a> class manually.</p>
+<p>For example, let’s say you want to add to the scene some objects with a texture that is generated on the fly, with shapes of random colors and positions. Let’s name them “doodles”.</p>
+<p>First, create a texture similar to what you want, at least, with the same dimensions (100x100 in this example).</p>
+<p>Something like this:</p>
+<img alt="A reference image for the custom object." src="../_images/scene-editor-prefab-black-box-doodle.webp" />
+<p>It is a reference texture. Upload it to the project and add it to the <a class="reference external" href="../asset-pack-editor/asset-pack-file.html">Asset Pack file</a>. You can create a new <a class="reference external" href="../asset-pack-editor/asset-pack-file.html">Asset Pack file</a> that will be used only by the editor, so you can exclude it from the distribution build of the game.</p>
+<p>So, create a <strong>Doodle</strong> <a class="reference external" href="../scene-editor/prefabs.html">prefab</a> with the <strong>doodle</strong> texture:</p>
+<img alt="Add the doodle image to the prefab file." src="../_images/scene-editor-prefab-black-box-1.webp" />
+<p>We have our <a class="reference external" href="../scene-editor/prefabs.html">prefab</a>. But you want to generate the texture on the fly. To do this, first disable the compilation of the scene, in the <a class="reference external" href="scene-compiler-general-settings.html">Scene compiler settings</a>:</p>
+<img alt="Disable code generation." src="../_images/scene-editor-prefab-black-box-2.webp" />
+<p>Now that you disabled the code compilation, you have to write the <code class="docutils literal notranslate"><span class="pre">Doodle</span></code> class in the <code class="docutils literal notranslate"><span class="pre">Doodle.js</span></code> file. It is a simple class, it extends the <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.GameObjects.Image.html">Phaser.GameObjects.Image</a> but instead of a real image texture it will generate its texture, on the fly:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nx">Doodle</span> <span class="k">extends</span> <span class="nx">Phaser</span><span class="p">.</span><span class="nx">GameObjects</span><span class="p">.</span><span class="nx">Image</span> <span class="p">{</span>
+
+    <span class="k">static</span> <span class="nx">ID</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+    <span class="k">static</span> <span class="nx">COLORS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">];</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * @param scene {Phaser.Scene}</span>
+<span class="cm">     */</span>
+    <span class="kr">constructor</span><span class="p">(</span><span class="nx">scene</span><span class="p">,</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">(</span><span class="nx">scene</span><span class="p">,</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">);</span>
+
+        <span class="c1">// create a new texture key</span>
+        <span class="nx">Doodle</span><span class="p">.</span><span class="nx">ID</span><span class="o">++</span><span class="p">;</span>
+        <span class="kd">const</span> <span class="nx">key</span> <span class="o">=</span> <span class="s2">&quot;doodle-&quot;</span> <span class="o">+</span> <span class="nx">Doodle</span><span class="p">.</span><span class="nx">ID</span><span class="p">;</span>
+
+        <span class="c1">// create a new canvas-based texture and add it</span>
+        <span class="c1">// to the TextureManager with the new key</span>
+        <span class="kd">const</span> <span class="nx">texture</span> <span class="o">=</span> <span class="nx">scene</span><span class="p">.</span><span class="nx">textures</span><span class="p">.</span><span class="nx">createCanvas</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="mf">200</span><span class="p">,</span> <span class="mf">200</span><span class="p">);</span>
+
+        <span class="c1">// get the context of the texture and draw the random doodle</span>
+        <span class="kd">const</span> <span class="nx">ctx</span> <span class="o">=</span> <span class="nx">texture</span><span class="p">.</span><span class="nx">getContext</span><span class="p">();</span>
+
+        <span class="nx">ctx</span><span class="p">.</span><span class="nx">strokeStyle</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">;</span>
+
+        <span class="c1">// draw 5 shapes</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mf">5</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+
+            <span class="nx">ctx</span><span class="p">.</span><span class="nx">save</span><span class="p">();</span>
+
+            <span class="c1">// add a little rotation to the shape</span>
+            <span class="kd">const</span> <span class="nx">angle</span> <span class="o">=</span> <span class="nx">Phaser</span><span class="p">.</span><span class="nb">Math</span><span class="p">.</span><span class="nx">RND</span><span class="p">.</span><span class="nx">integerInRange</span><span class="p">(</span><span class="o">-</span><span class="mf">10</span><span class="p">,</span> <span class="mf">10</span><span class="p">);</span>
+            <span class="nx">ctx</span><span class="p">.</span><span class="nx">rotate</span><span class="p">(</span><span class="nx">Phaser</span><span class="p">.</span><span class="nb">Math</span><span class="p">.</span><span class="nx">DegToRad</span><span class="p">(</span><span class="nx">angle</span><span class="p">));</span>
+
+            <span class="nx">ctx</span><span class="p">.</span><span class="nx">beginPath</span><span class="p">();</span>
+
+            <span class="c1">// draw a rect, at a random position with a random size</span>
+            <span class="nx">ctx</span><span class="p">.</span><span class="nx">rect</span><span class="p">(</span>
+                <span class="nx">Phaser</span><span class="p">.</span><span class="nb">Math</span><span class="p">.</span><span class="nx">RND</span><span class="p">.</span><span class="nx">integerInRange</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span> <span class="mf">50</span><span class="p">),</span>
+                <span class="nx">Phaser</span><span class="p">.</span><span class="nb">Math</span><span class="p">.</span><span class="nx">RND</span><span class="p">.</span><span class="nx">integerInRange</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span> <span class="mf">50</span><span class="p">),</span>
+                <span class="nx">Phaser</span><span class="p">.</span><span class="nb">Math</span><span class="p">.</span><span class="nx">RND</span><span class="p">.</span><span class="nx">integerInRange</span><span class="p">(</span><span class="mf">20</span><span class="p">,</span> <span class="mf">50</span><span class="p">),</span>
+                <span class="nx">Phaser</span><span class="p">.</span><span class="nb">Math</span><span class="p">.</span><span class="nx">RND</span><span class="p">.</span><span class="nx">integerInRange</span><span class="p">(</span><span class="mf">20</span><span class="p">,</span> <span class="mf">50</span><span class="p">));</span>
+
+            <span class="c1">// fill it with a random color</span>
+            <span class="kd">const</span> <span class="nx">color</span> <span class="o">=</span> <span class="nx">Phaser</span><span class="p">.</span><span class="nb">Math</span><span class="p">.</span><span class="nx">RND</span><span class="p">.</span><span class="nx">pick</span><span class="p">(</span><span class="nx">Doodle</span><span class="p">.</span><span class="nx">COLORS</span><span class="p">);</span>
+            <span class="nx">ctx</span><span class="p">.</span><span class="nx">fillStyle</span> <span class="o">=</span> <span class="nx">color</span><span class="p">;</span>
+
+            <span class="nx">ctx</span><span class="p">.</span><span class="nx">fill</span><span class="p">();</span>
+            <span class="nx">ctx</span><span class="p">.</span><span class="nx">stroke</span><span class="p">();</span>
+
+            <span class="nx">ctx</span><span class="p">.</span><span class="nx">restore</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="c1">// needed if the game is using the WebGL renderer</span>
+        <span class="nx">texture</span><span class="p">.</span><span class="nx">refresh</span><span class="p">();</span>
+
+        <span class="c1">// set the new texture to the object</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">setTexture</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The <strong>Doodle</strong> <a class="reference external" href="../scene-editor/prefabs.html">prefab</a> is ready. Open the <strong>Level</strong> scene file and add a couple of <strong>Doodle</strong> <a class="reference external" href="../scene-editor/prefab-create-instance.html">prefab instances</a> to it:</p>
+<img alt="The Doodle prefab instances in the level scene." src="../_images/scene-editor-prefab-black-box-3.webp" />
+<p>Note all <strong>Doodle</strong> instances look the same. The custom code you wrote is executed in the game, not in the editor. The editor is using the <code class="docutils literal notranslate"><span class="pre">doodle.png</span></code> image you created as a reference.</p>
+<p>Look in the <code class="docutils literal notranslate"><span class="pre">Level.js</span></code> file: the <a class="reference external" href="../scene-editor/prefab-create-instance.html">prefab instances</a> are created as expected.  The trick here is that the code inside the <strong>Doodle</strong> constructor is your code, not the code generated by the <a class="reference external" href="../scene-editor/scene-compiler.html">scene compiler</a>. You only need to write a constructor signature that is compatible with the code of the <code class="docutils literal notranslate"><span class="pre">Level.js</span></code> file:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nx">Level</span> <span class="k">extends</span> <span class="nx">Phaser</span><span class="p">.</span><span class="nx">Scene</span> <span class="p">{</span>
+
+    <span class="kr">constructor</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">(</span><span class="s2">&quot;Level&quot;</span><span class="p">);</span>
+
+    <span class="p">}</span>
+
+    <span class="nx">create</span><span class="p">()</span> <span class="p">{</span>
+
+        <span class="c1">// ...</span>
+
+        <span class="c1">// doodle</span>
+        <span class="kd">const</span> <span class="nx">doodle</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Doodle</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="mf">388</span><span class="p">,</span> <span class="mf">105</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">.</span><span class="nx">existing</span><span class="p">(</span><span class="nx">doodle</span><span class="p">);</span>
+
+        <span class="c1">// doodle_1</span>
+        <span class="kd">const</span> <span class="nx">doodle_1</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Doodle</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="mf">380</span><span class="p">,</span> <span class="mf">240</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">.</span><span class="nx">existing</span><span class="p">(</span><span class="nx">doodle_1</span><span class="p">);</span>
+
+        <span class="c1">// doodle_2</span>
+        <span class="kd">const</span> <span class="nx">doodle_2</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Doodle</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="mf">530</span><span class="p">,</span> <span class="mf">170</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">.</span><span class="nx">existing</span><span class="p">(</span><span class="nx">doodle_2</span><span class="p">);</span>
+
+        <span class="c1">// ...</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>So, run the game now: you will see the <strong>Doodle</strong> instances are rendered with random shapes and colors. The instances are using your custom code and your way to create the textures:</p>
+<img alt="The different doodles in the game." src="../_images/scene-editor-prefab-black-box-4.webp" />
+<p>This “black box” trick is not perfect. An ideal editor should run your <strong>Doodle</strong> custom code and show the <a class="reference external" href="../scene-editor/prefab-create-instance.html">prefab instances</a> in the <a class="reference external" href="../scene-editor/index.html">Scene Editor</a> with the custom textures. But it is something very complex to implement.</p>
+<p>With a black box <a class="reference external" href="../scene-editor/prefabs.html">prefab</a>, you can do “black magic”. Think that using it you can place 3D objects in the scene, by using a third-party framework and the <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.GameObjects.Extern.html">Extern game object</a>. Or complex 2D objects modeled by animation tools. Or tile-maps created with a <a class="reference external" href="https://phaser.io">Phaser</a> unsupported format.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="prefab-instance-children.html" class="btn btn-neutral float-left" title="Adding children to a prefab instance" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="user-components.html" class="btn btn-neutral float-right" title="User Components" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022, Arian Fornaris.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67206336-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-67206336-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

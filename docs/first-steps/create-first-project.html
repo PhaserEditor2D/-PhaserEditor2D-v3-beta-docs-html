@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create your first project &mdash; Phaser Editor 2D Help</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Add an image to the scene" href="add-image-to-scene.html" />
+    <link rel="prev" title="Install Phaser Editor 2D All-in-One" href="install-all-in-one.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+            <a href="../index.html" class="icon icon-home"> Phaser Editor 2D
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v3.36.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">First steps</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="download-and-install.html">Download and install</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Create your first project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add-image-to-scene.html">Add an image to the scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unlock-ide.html">Unlock the IDE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="learn-phaser-with-phaser-editor.html">Learn Phaser with Phaser Editor 2D</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../asset-pack-editor/index.html">Asset Pack Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene-editor/index.html">Scene Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code-editor/index.html">Code Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animations-editor/index.html">Animations Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas-editor/index.html">Atlas Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pricing/index.html">License and pricing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #343131" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Phaser Editor 2D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">First steps</a> &raquo;</li>
+      <li>Create your first project</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="create-your-first-project">
+<h1>Create your first project<a class="headerlink" href="#create-your-first-project" title="Permalink to this headline"></a></h1>
+<p>We provide a couple of project templates that you can download from the <a class="reference external" href="https://phasereditor2d.com/start">Phaser Editor 2D Start page</a>. You’ll see that each template card contains links for downloading a zip with the project, a link to the GitHub project, and a link for opening the project in <a class="reference external" href="https://gitpod.io">Gitpod</a> (a cloud-based development environment).</p>
+<img alt="Download project templates online" src="../_images/first-steps-online-start-page-09132021.webp" />
+<p>There are two groups for templates: <strong>Basic Templates</strong> and <strong>Example Games</strong>.</p>
+<p>The <strong>Basic Templates</strong> are “empty” projects with different setups. If you are making a professional game, we recommend using the <strong>Webpack TypeScript</strong> template.</p>
+<p>You can take a look to the <strong>Example Games</strong> for learning Phaser Editor 2D by looking the code of “real games”.</p>
+<p>Each project template has a README file (in the GitHub repository) with the instructions for installing all required dependencies.</p>
+<p>More templates are available in the <a class="reference external" href="https://marketplace.phasereditor2d.com">Phaser Editor 2D Marketplace</a>.</p>
+<p>This method for stating a new project is great for the <a class="reference external" href="../intro/core.html">Phaser Editor 2D Core</a> distribution or for starting a new project in the cloud.</p>
+<p>The <a class="reference external" href="../intro/all-in-one.html">Phaser Editor 2D All-in-One</a> distribution has the option of creating a new project. It contains some built-in templates (available offline), and also connects to the marketplace for getting more.</p>
+<p>Follow these steps:</p>
+<ul>
+<li><p>Click on the <strong>New Project</strong> button:</p>
+<img alt="All-in-one new project." src="../_images/first-steps-allInOne-new-project-1-20220415.webp" />
+</li>
+<li><p>Select one of the project templates. Or click on the <em>Get more in the Marketplace</em> link, it shows more templates available in the the <a class="reference external" href="https://marketplace.phasereditor2d.com">Phaser Editor 2D Marketplace</a> (it requires an Internet connection):</p>
+<img alt="Select project template" src="../_images/first-steps-allInOne-new-project-2-20220415.webp" />
+<img alt="Select project template from the marketplace." src="../_images/first-steps-allInOne-new-project-marketplace-20220415.webp" />
+<p>Projects in the marketplace are created by the Phaser Editor 2D team but also by the community.</p>
+</li>
+<li><p>When you select a project template, the IDE opens the OS file explorer. Select a directory where the project content will be copied:</p>
+<img alt="Select the project folder." src="../_images/first-steps-select-project-template-20220415.webp" />
+</li>
+</ul>
+<p>The new project is created and shown in the workbench. If you get it from the marketplace, then it will get a time for fetching the files.</p>
+<img alt="Workbench shows the new project" src="../_images/first-steps-new-project-2-04012021.webp" />
+<p>To run your project, click in the <strong>Play</strong> button at the beginning of the toolbar:</p>
+<img alt="Play the project." src="../_images/first-steps-new-play-project-04012021.webp" />
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="install-all-in-one.html" class="btn btn-neutral float-left" title="Install Phaser Editor 2D All-in-One" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="add-image-to-scene.html" class="btn btn-neutral float-right" title="Add an image to the scene" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022, Arian Fornaris.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67206336-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-67206336-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compiler settings &mdash; Phaser Editor 2D Help</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Scene settings" href="scene-compiler-scene-settings.html" />
+    <link rel="prev" title="User code" href="scene-compiler-user-code.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+            <a href="../index.html" class="icon icon-home"> Phaser Editor 2D
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v3.36.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-steps/index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../asset-pack-editor/index.html">Asset Pack Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Scene Editor</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="create-new-scene-file.html">Create a new Scene file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add-object.html">Adding an object to the scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inspector-view.html">Inspector view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game-objects.html">Game Object types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-properties.html">Scene properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcade-physics.html">Arcade physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-with-parent-objects.html">Working with parent objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object-list.html">Object List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="display-list.html">Display List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prefabs.html">Prefabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-components.html">User Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation-tools.html">Manipulation tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layout-tools.html">Layout tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="scene-compiler.html">The scene compiler</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="scene-compiler-executing-compiler.html">Executing the compiler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scene-compiler-user-code.html">User code</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Compiler settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scene-compiler-scene-settings.html">Scene settings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../code-editor/index.html">Code Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animations-editor/index.html">Animations Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas-editor/index.html">Atlas Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pricing/index.html">License and pricing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #343131" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Phaser Editor 2D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Scene Editor</a> &raquo;</li>
+          <li><a href="scene-compiler.html">The scene compiler</a> &raquo;</li>
+      <li>Compiler settings</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="compiler-settings">
+<h1>Compiler settings<a class="headerlink" href="#compiler-settings" title="Permalink to this headline"></a></h1>
+<p>The <a class="reference external" href="../scene-editor/scene-compiler.html">scene compiler</a> uses two different sets of parameters to refine the code generation of a <a class="reference external" href="https://phaser.io">Phaser</a> scene and a prefab file. However, there are general, or shared settings, used in both cases:</p>
+<img alt="General settings." src="../_images/scene-compiler-general-settings-08222021.webp" />
+<p>The parameters:</p>
+<ul class="simple">
+<li><p><strong>Generate Code</strong>: un-check it if you don’t want the compiler to compile the file. In the <a class="reference external" href="prefab-black-box.html">Using a prefab as a black box</a> section there is an example that uses a scene file without code generation.</p></li>
+<li><p><strong>Output Language</strong>: you can select if the scene is compiled into JavaScript or TypeScript. In case you select TypeScript, you need to compile yourself the TypeScript generated files, with the TypeScript compiler (<code class="docutils literal notranslate"><span class="pre">tsc</span></code>).</p></li>
+<li><p><strong>Fields In Constructor (JS)</strong>: enable this for generating the initialization of the attributes in the class constructor. By default it is false and the fields are initialized in the class declaration. This parameter is used only when the output language is JavaScript.</p></li>
+<li><p><strong>Export Class (ES Module)</strong>: includes the <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">default</span></code> class modifiers.</p></li>
+<li><p><strong>Auto Import (ES Module)</strong>: adds “import” statements for importing the types used in different parts of the code generation. Code written by the user is not processed. If you use other types, you should import them manually.</p></li>
+<li><p><strong>Super Class</strong>: you can force the generated class (prefab or scene), to extends the given class. If empty, the compiler will detect the appropriate class.</p></li>
+<li><p><strong>Insert Spaces</strong>: if checked, the tabs will be converted to spaces.</p></li>
+<li><p><strong>Tab Size</strong>: the number of spaces to be used if the <strong>Insert Spaces</strong> option is checked.</p></li>
+</ul>
+<p>By the way, the name of the file and the class that is generated by the compiler is the same as the scene file. For example, a <code class="docutils literal notranslate"><span class="pre">Zombie.scene</span></code> file is compiled into <code class="docutils literal notranslate"><span class="pre">Zombie.js</span></code> (or <code class="docutils literal notranslate"><span class="pre">Zombie.ts</span></code>) and the name of the class will be <code class="docutils literal notranslate"><span class="pre">Zombie</span></code>.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="scene-compiler-user-code.html" class="btn btn-neutral float-left" title="User code" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="scene-compiler-scene-settings.html" class="btn btn-neutral float-right" title="Scene settings" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022, Arian Fornaris.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67206336-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-67206336-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

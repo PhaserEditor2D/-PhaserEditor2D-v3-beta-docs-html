@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Server options &mdash; Phaser Editor 2D Help</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Resources caching" href="resources-caching.html" />
+    <link rel="prev" title="Project configuration" href="project-config.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+            <a href="../index.html" class="icon icon-home"> Phaser Editor 2D
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v3.36.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-steps/index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../asset-pack-editor/index.html">Asset Pack Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene-editor/index.html">Scene Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code-editor/index.html">Code Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animations-editor/index.html">Animations Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas-editor/index.html">Atlas Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Miscellaneous</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="project-config.html">Project configuration</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Server options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getting-the-options-from-a-file">Getting the options from a file</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="resources-caching.html">Resources caching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources-filtering.html">Resources filtering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="local-preferences.html">Local preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content-viewers.html">Content viewers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="update.html">Updating the editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html">Plugins</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../pricing/index.html">License and pricing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #343131" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Phaser Editor 2D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Miscellaneous</a> &raquo;</li>
+      <li>Server options</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="server-options">
+<h1>Server options<a class="headerlink" href="#server-options" title="Permalink to this headline"></a></h1>
+<p>To get the full list of options of the <a class="reference external" href="https://phasereditor2d.com">Phaser Editor 2D</a> server you can use the <code class="docutils literal notranslate"><span class="pre">--help</span></code> option. Here we explain them in detail.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ PhaserEditor2D --help
+</pre></div>
+</div>
+<p>Following,</p>
+<p><strong>-public</strong></p>
+<p>By default, the editor starts as a local application. It allows you to execute third-party tools like <a class="reference external" href="https://code.visualstudio.com">Visual Studio Code</a> or the File Manager and opens the default web browser automatically at the startup.</p>
+<p>However, you may want to execute the server in a remote machine. To do this, you have to use the <code class="docutils literal notranslate"><span class="pre">-public</span></code> option. when it is set, the server allows remote connections and disables all the integration with the remote host applications.</p>
+<p><strong>-disable-gzip</strong></p>
+<p>By default, the server gzip compresses the files sent over the network. It requires an extra usage of the CPU, so you may disable it if you want to use less CPU in the server machine.</p>
+<p><strong>-disable-open-browser</strong></p>
+<p>If you don’t want to open the default browser at the server startup. Not needed if you run the server with the <code class="docutils literal notranslate"><span class="pre">-public</span></code> option.</p>
+<p><strong>-browser-command</strong></p>
+<p>When the server starts it opens the default browser of the OS. If you want it to launch a different browser, you can use the <strong>-browser-command</strong> option:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ PhaserEditor2D -browser-command <span class="s2">&quot;/path/to/firefox </span><span class="nv">$URL</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>In the above command, the server will start firefox. Note the <code class="docutils literal notranslate"><span class="pre">$URL</span></code> variable is replaced by the URL of the editor.</p>
+<p>We recommend using Google Chrome. It has an application mode that runs the editor similar to a desktop application. Try running the editor like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ PhaserEditor2D -browser-command <span class="s1">&#39;/path/to/google-chrome &quot;--app=$URL&quot;&#39;</span>
+</pre></div>
+</div>
+<p><strong>-external-editor-command</strong></p>
+<p>When the server runs in application mode, the IDE allows launching an external editor. By default, it is configured to run <a class="reference external" href="https://code.visualstudio.com">Visual Studio Code</a> (the <code class="docutils literal notranslate"><span class="pre">code</span></code> command).</p>
+<p>However, you can change the command to launch a different external editor. For example, if instead of <a class="reference external" href="https://code.visualstudio.com">Visual Studio Code</a> you want to launch the Atom editor, you can run the server with these options:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ PhaserEditor2D -external-editor-command <span class="s1">&#39;/path/to/atom &quot;$LOC&quot;&#39;</span> -external-editor-name Atom
+</pre></div>
+</div>
+<p>Note the <code class="docutils literal notranslate"><span class="pre">$LOC</span></code> variable will be expanded to the location of the project.</p>
+<p><strong>-external-editor-name</strong></p>
+<p>The display name of the external editor. Used in the UI. By default it is <strong>Visual Studio Code</strong>.</p>
+<p><strong>-editor string</strong></p>
+<p>In the installation folder of <a class="reference external" href="https://phasereditor2d.com">Phaser Editor 2D</a> there is the <code class="docutils literal notranslate"><span class="pre">editor</span></code> folder. It contains the code of the IDE. If you want to load other implementation of the IDE, you can use the <code class="docutils literal notranslate"><span class="pre">-editor</span> <span class="pre">/other/editor/implementation</span></code> option. This is useful for testing or developing a different version of the IDE.</p>
+<p><strong>-lickey string</strong></p>
+<p>Use this option to unlock the editor: <code class="docutils literal notranslate"><span class="pre">-lickey</span> <span class="pre">&lt;valid-lic-key&gt;</span></code>.</p>
+<p><strong>-port int</strong></p>
+<p>By default, the server uses the <code class="docutils literal notranslate"><span class="pre">1959</span></code> port for HTTP networking. You can use this option to change it.</p>
+<p><strong>-project string</strong></p>
+<p>This is a mandatory flag. Use it for setting the project path:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ PhaserEditor2D -project /path/to/project
+</pre></div>
+</div>
+<section id="getting-the-options-from-a-file">
+<h2>Getting the options from a file<a class="headerlink" href="#getting-the-options-from-a-file" title="Permalink to this headline"></a></h2>
+<p>You may run the editor always with the same options, and it could be a waste of time typing each option every time.</p>
+<p>If it is the case, you can create a script (a batch) to run the editor with the desired options. Or, you can change the <code class="docutils literal notranslate"><span class="pre">flags.txt</span></code> file in the root of the editor installation.</p>
+<p>When the editor starts, it reads the <code class="docutils literal notranslate"><span class="pre">flags.txt</span></code> file and reads the options provided there. It is a way to configure the editor.</p>
+<p>The format of the <code class="docutils literal notranslate"><span class="pre">flags.txt</span></code> file is simple. Each line contains an argument. For example, if you always want to run the server like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ PhaserEditor2D -public -port <span class="m">80</span> -project /path/to/project
+</pre></div>
+</div>
+<p>You can write this content in the <code class="docutils literal notranslate"><span class="pre">flags.txt</span></code> file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-public
+-port
+<span class="m">80</span>
+</pre></div>
+</div>
+<p>Also, you can write blank lines and comments. Comments are lines that start with the <code class="docutils literal notranslate"><span class="pre">#</span></code> character:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-public
+<span class="c1"># -port</span>
+<span class="c1"># 80</span>
+</pre></div>
+</div>
+<p>If you have Google Chrome installed, let’s say, in a Windows machine, you can write these lines in the file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-browser-command
+<span class="s2">&quot;C:\Program Files\Google\Chrome\Application\chrome.exe&quot;</span> <span class="s2">&quot;--app=</span><span class="nv">$URL</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>It will open the editor in an instance of the Google Chrome browser but in application mode.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="project-config.html" class="btn btn-neutral float-left" title="Project configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="resources-caching.html" class="btn btn-neutral float-right" title="Resources caching" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022, Arian Fornaris.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67206336-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-67206336-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

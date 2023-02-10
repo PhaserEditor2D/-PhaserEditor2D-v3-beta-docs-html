@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The User Components compiler &mdash; Phaser Editor 2D Help</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Implementing behaviors with the Phaser events" href="user-components-start-update-methods.html" />
+    <link rel="prev" title="Edit the component code" href="user-components-editor-edit-code.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+            <a href="../index.html" class="icon icon-home"> Phaser Editor 2D
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v3.36.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-steps/index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../asset-pack-editor/index.html">Asset Pack Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Scene Editor</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="create-new-scene-file.html">Create a new Scene file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add-object.html">Adding an object to the scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inspector-view.html">Inspector view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game-objects.html">Game Object types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-properties.html">Scene properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcade-physics.html">Arcade physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-with-parent-objects.html">Working with parent objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object-list.html">Object List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="display-list.html">Display List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prefabs.html">Prefabs</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="user-components.html">User Components</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="user-components-create-file.html">Create a new User Components file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-components-editor.html">User Components Editor</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">The User Components compiler</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#compiler-settings">Compiler settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="user-components-start-update-methods.html">Implementing behaviors with the Phaser events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-components-super-class.html">A base class for your components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-components-awake-event.html">The awake event</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-components-instancing.html">Adding User Components to a Game Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-components-in-prefab-object.html">Adding User Components to a Prefab</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation-tools.html">Manipulation tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layout-tools.html">Layout tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-compiler.html">The scene compiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../code-editor/index.html">Code Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animations-editor/index.html">Animations Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas-editor/index.html">Atlas Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pricing/index.html">License and pricing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #343131" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Phaser Editor 2D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Scene Editor</a> &raquo;</li>
+          <li><a href="user-components.html">User Components</a> &raquo;</li>
+      <li>The User Components compiler</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="the-user-components-compiler">
+<h1>The User Components compiler<a class="headerlink" href="#the-user-components-compiler" title="Permalink to this headline"></a></h1>
+<p>The <a class="reference external" href="../scene-editor/user-components.html">user components</a> are configured in <code class="docutils literal notranslate"><span class="pre">*.components</span></code> files and used by the <a class="reference external" href="../scene-editor/index.html">Scene Editor</a>. It is a concept of <a class="reference external" href="https://phasereditor2d.com">Phaser Editor 2D</a>, not <a class="reference external" href="https://phaser.io">Phaser</a>. So we use the same <a class="reference external" href="../scene-editor/index.html">Scene Editor</a> philosophy, it compiles our custom configurations into plain, readable, fully <a class="reference external" href="https://phaser.io">Phaser</a> compatible code.</p>
+<p>Following, look at how an <strong>HorizontalMove</strong> component is compiled into JavaScript.</p>
+<p>The component information:</p>
+<img alt="Component metadata." src="../_images/scene-editor-user-components-editor-info-20221101.webp" />
+<p>The properties of the component:</p>
+<img alt="The properties" src="../_images/scene-editor-user-components-props-20221101.webp" />
+<p><strong>Horizontal Velocity</strong></p>
+<img alt="Horizaontal move property." src="../_images/scene-editor-user-components-prop-1-20221101.webp" />
+<p><strong>Min X</strong></p>
+<img alt="Min position X" src="../_images/scene-editor-user-components-prop-2-20221101.webp" />
+<p><strong>Max X</strong></p>
+<img alt="Max position Y." src="../_images/scene-editor-user-components-prop-3-20221101.webp" />
+<p>The generated code:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// You can write more code here</span>
+
+<span class="cm">/* START OF COMPILED CODE */</span>
+
+<span class="kd">class</span> <span class="nx">HorizontalMove</span> <span class="k">extends</span> <span class="nx">BaseComponent</span> <span class="p">{</span>
+
+    <span class="kr">constructor</span><span class="p">(</span><span class="nx">gameObject</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">gameObject</span><span class="p">[</span><span class="s2">&quot;__HorizontalMove&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+
+        <span class="cm">/** @type {Phaser.GameObjects.Image} */</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">gameObject</span> <span class="o">=</span> <span class="nx">gameObject</span><span class="p">;</span>
+        <span class="cm">/** @type {number} */</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">horizVelocity</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+        <span class="cm">/** @type {number} */</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">minX</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+        <span class="cm">/** @type {number} */</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">maxX</span> <span class="o">=</span> <span class="mf">3070</span><span class="p">;</span>
+
+        <span class="cm">/* START-USER-CTR-CODE */</span>
+        <span class="c1">// Write your code here.</span>
+        <span class="cm">/* END-USER-CTR-CODE */</span>
+    <span class="p">}</span>
+
+    <span class="cm">/** @returns {HorizontalMove} */</span>
+    <span class="k">static</span> <span class="nx">getComponent</span><span class="p">(</span><span class="nx">gameObject</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">gameObject</span><span class="p">[</span><span class="s2">&quot;__HorizontalMove&quot;</span><span class="p">];</span>
+    <span class="p">}</span>
+
+    <span class="cm">/* START-USER-CODE */</span>
+    <span class="c1">// Write your code here.</span>
+    <span class="cm">/* END-USER-CODE */</span>
+<span class="p">}</span>
+
+<span class="cm">/* END OF COMPILED CODE */</span>
+<span class="c1">// You can write more code here</span>
+</pre></div>
+</div>
+<p>The generated class is very simple, next we explain it part by part:</p>
+<div class="topic">
+<p class="topic-title">The super class</p>
+<p>If a value (in this case <code class="docutils literal notranslate"><span class="pre">BaseComponent</span></code>) is set to the <strong>Super Class</strong> parameter. Then the class code is generated like this:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nx">HorizontalMove</span> <span class="k">extends</span> <span class="nx">BaseComponent</span> <span class="p">{</span>
+    <span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>A super class allows to create behaviors that are common to certain components, or provide helper methods. It is the case of the <strong>UserComponent</strong> class, explained in the <a class="reference external" href="user-components-start-update-methods.html">Starting and updating the User Components</a> section.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>A common error when extending components is to load the script files in the <a class="reference external" href="../asset-pack-editor/index.html">Asset Pack Editor</a>, using the <strong>Script</strong> file type. It can cause a “missing class” error at the execution of the game. The problem is that the scripts files are loaded and executed in any order. The solution is to add the scripts using the <strong>Scripts</strong> file type of the <a class="reference external" href="../asset-pack-editor/index.html">Asset Pack Editor</a>. It allows setting the execution order of the scripts: the super class script <code class="docutils literal notranslate"><span class="pre">UserComponent.js</span></code> should be executed before the component script <code class="docutils literal notranslate"><span class="pre">HorizontalMove.js</span></code>.
+Also, to avoid this error, you can use a bundler like Webpack, Parcel, or just TypeScript (compiling all to a single file).</p>
+<p><a class="reference external" href="../asset-pack-editor/import-scripts.html#execution-order-of-the-scripts">Learn more about the execution order of the scripts</a></p>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title">The constructor</p>
+<p>The component has a constructor where all properties are initialized and you can add your initialization code too.</p>
+<img alt="The constructor code." src="../_images/scene-editor-user-components-ctr-code-07292020.webp" />
+<p>The constructor is used to create the component and add it to the game object:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span> <span class="nx">enemy</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">.</span><span class="nx">image</span><span class="p">(...);</span>
+<span class="kd">const</span> <span class="nx">enemyMove</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">HorizontalMove</span><span class="p">(</span><span class="nx">enemyMove</span><span class="p">);</span>
+<span class="nx">enemyMove</span><span class="p">.</span><span class="nx">maxX</span> <span class="o">=</span> <span class="mf">400</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title">The component accessor method</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">getComponent()</span></code> method gets the component from a game object, if exists:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nx">HorizontalMove</span> <span class="p">{</span>
+
+    <span class="p">...</span>
+
+    <span class="cm">/** @returns {HorizontalMove} */</span>
+    <span class="k">static</span> <span class="nx">getComponent</span><span class="p">(</span><span class="nx">gameObject</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">gameObject</span><span class="p">[</span><span class="s2">&quot;__HorizontalMove&quot;</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// in a random part of the game</span>
+<span class="kd">const</span> <span class="nx">enemy</span> <span class="o">=</span> <span class="p">...;</span>
+<span class="kd">const</span> <span class="nx">horizMove</span> <span class="o">=</span> <span class="nx">HorizontalMove</span><span class="p">.</span><span class="nx">getComponent</span><span class="p">(</span><span class="nx">enemy</span><span class="p">);</span>
+<span class="nx">horizMove</span><span class="p">.</span><span class="nx">minX</span> <span class="o">=</span> <span class="mf">10</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title">The user members of the component</p>
+<p>You can add members to the component class. Just write them inside the <code class="docutils literal notranslate"><span class="pre">/*</span> <span class="pre">STAR-USER-CODE</span> <span class="pre">*/</span></code> and <code class="docutils literal notranslate"><span class="pre">/*</span> <span class="pre">END-USER-CODE</span> <span class="pre">*/</span></code> comments.</p>
+<p>Probably, you would like to write a <strong>start</strong> and <strong>update</strong> method, like is explained in the <a class="reference external" href="user-components-start-update-methods.html">Starting and updating components</a> section.</p>
+</div>
+<section id="compiler-settings">
+<h2>Compiler settings<a class="headerlink" href="#compiler-settings" title="Permalink to this headline"></a></h2>
+<p>The User Components compiler supports two JavaScript and TypeScript as output languages. You can select this language in the <a class="reference external" href="../workbench/inspector-view.html">Inspector view</a>, when no component is selected. Also, you can select if insert spaces for indentation, the tab size, or the auto export/import of ES modules:</p>
+<img alt="Selecting compiler settings." src="../_images/scene-editor-user-components-compiler-settings.webp" />
+<p>The settings have default values, but if there are other scene files or user components files, the default values will be taken from the latest modified file (scene file if not components files are available).</p>
+<p>When the <strong>Export Class (ES Module)</strong> parameter is on, the compiler includes the <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">default</span></code> class modifiers.</p>
+<p>When the <strong>Auto Import (ES Module)</strong> parameter is on, the compiler adds “import” statements for importing the types used in different parts of the code generation. Code written by the user is not processed. If you use other types, you should import them manually.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="user-components-editor-edit-code.html" class="btn btn-neutral float-left" title="Edit the component code" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="user-components-start-update-methods.html" class="btn btn-neutral float-right" title="Implementing behaviors with the Phaser events" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022, Arian Fornaris.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67206336-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-67206336-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

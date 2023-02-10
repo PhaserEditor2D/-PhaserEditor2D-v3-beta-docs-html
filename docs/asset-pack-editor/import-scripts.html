@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Importing JavaScript files &mdash; Phaser Editor 2D Help</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Setting the root folder for the asset files" href="public-root.html" />
+    <link rel="prev" title="Importing from the Files view" href="import-from-files-view.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+            <a href="../index.html" class="icon icon-home"> Phaser Editor 2D
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v3.36.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-steps/index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Asset Pack Editor</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="create-asset-pack-file.html">Create a new Asset Pack file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asset-pack-file.html">Asset Pack File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editor-content-layout.html">Editor content layout</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="add-file.html">Importing files</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="add-file-with-add-button.html">Importing using the Main toolbar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="import-from-blocks-view.html">Importing from the Blocks view</a></li>
+<li class="toctree-l3"><a class="reference internal" href="import-from-files-view.html">Importing from the Files view</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Importing JavaScript files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#execution-order-of-the-scripts">Execution order of the scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="public-root.html">Setting the root folder for the asset files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="organizing-the-assets.html">Organizing the Asset Pack files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outline-view.html">Outline view integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inspector-view.html">Inspector view integration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../scene-editor/index.html">Scene Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code-editor/index.html">Code Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animations-editor/index.html">Animations Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas-editor/index.html">Atlas Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pricing/index.html">License and pricing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #343131" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Phaser Editor 2D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Asset Pack Editor</a> &raquo;</li>
+          <li><a href="add-file.html">Importing files</a> &raquo;</li>
+      <li>Importing JavaScript files</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="importing-javascript-files">
+<h1>Importing JavaScript files<a class="headerlink" href="#importing-javascript-files" title="Permalink to this headline"></a></h1>
+<p>In the JavaScript development world, there are multiple ways to load script files. The most common is to load them using the <code class="docutils literal notranslate"><span class="pre">&lt;script&gt;</span></code> tag in the <code class="docutils literal notranslate"><span class="pre">index.html</span></code> file. Some frameworks allow loading script files at any time, via JavaScript. <a class="reference external" href="https://phaser.io">Phaser</a> provides different ways to load the scripts, each one with its purpose:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">this.load.script(...)</span></code> <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.Loader.LoaderPlugin.html#script__anchor">[docs]</a>: It loads and executes the provided script file or files in random order.  This can break your code if one script depends on another that is not loaded yet.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">this.load.scripts(...)</span></code> <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.Loader.LoaderPlugin.html#scripts__anchor">[docs]</a>: It loads a list of script files and executes them in the specified order (see the section below).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">this.load.scenePlugin(...)</span></code> <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.Loader.LoaderPlugin.html#scenePlugin__anchor">[docs]</a>: It loads and executes the script files, but assumes they create new <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.Loader.LoaderPlugin.html#Phaser.Scenes.ScenePlugin.html">Phaser.Scenes.ScenePlugin</a> instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">this.load.sceneFile(...)</span></code> <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.Loader.LoaderPlugin.html#sceneFile__anchor">[docs]</a>: It loads and executes the script files, but assumes they create <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.Loader.LoaderPlugin.html#Phaser.Scene.html">Phaser.Scene</a> instances.</p></li>
+</ul>
+<p>So the same <a class="reference external" href="https://phaser.io">Phaser</a> framework can be used as a JavaScript packing/loading tool, and it has a few clear advantages:</p>
+<ul class="simple">
+<li><p>You can load the scripts on demand when needed, such as when the game has many levels.</p></li>
+<li><p>You can report loading progress of script files, just like you do with other assets.</p></li>
+<li><p>Scripts can be added to an <a class="reference external" href="../asset-pack-editor/asset-pack-file.html">Asset Pack file</a> using the <a class="reference external" href="https://phasereditor2d.com">Phaser Editor 2D</a> toolset.</p></li>
+</ul>
+<p>By the way, when you add an entry for a JavaScript file to an <a class="reference external" href="../asset-pack-editor/asset-pack-file.html">Asset Pack file</a>, and that script is associated with a <a class="reference external" href="../scene-editor/index.html">Scene Editor</a> file (<code class="docutils literal notranslate"><span class="pre">.scene</span></code>), the <a class="reference external" href="../asset-pack-editor/index.html">Asset Pack Editor</a> shows an inline preview of the scene, for easy identification.</p>
+<img alt="Scene JavaScript files are displayed with a scene screenshot." src="../_images/asset-pack-editor-import-script-files-01012022.webp" />
+<section id="execution-order-of-the-scripts">
+<h2>Execution order of the scripts<a class="headerlink" href="#execution-order-of-the-scripts" title="Permalink to this headline"></a></h2>
+<p>A missing class is a common error when you load scripts using the <a class="reference external" href="../asset-pack-editor/index.html">Asset Pack Editor</a>. It happens when a class <code class="docutils literal notranslate"><span class="pre">B</span></code> in a script <code class="docutils literal notranslate"><span class="pre">B.js</span></code> extends a class <code class="docutils literal notranslate"><span class="pre">A</span></code> in the script <code class="docutils literal notranslate"><span class="pre">A.js</span></code>, but <code class="docutils literal notranslate"><span class="pre">B.js</span></code> is executed before <code class="docutils literal notranslate"><span class="pre">A.js</span></code>. The solution is to use the <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.Loader.LoaderPlugin.html#scripts__anchor">Scripts file type</a>. With this method, you can set execution order of the files:</p>
+<img alt="Select to add a Scripts file type." src="../_images/asset-pack-editor-scripts-1-01012022.webp" />
+<img alt="Select to add a Scripts file type." src="../_images/asset-pack-editor-scripts-2-01012022.webp" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="import-from-files-view.html" class="btn btn-neutral float-left" title="Importing from the Files view" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="public-root.html" class="btn btn-neutral float-right" title="Setting the root folder for the asset files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022, Arian Fornaris.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67206336-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-67206336-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adding children to a prefab instance &mdash; Phaser Editor 2D Help</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Using a prefab as a black box" href="prefab-black-box.html" />
+    <link rel="prev" title="Nested prefabs" href="prefab-nested.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+            <a href="../index.html" class="icon icon-home"> Phaser Editor 2D
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v3.36.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-steps/index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../asset-pack-editor/index.html">Asset Pack Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Scene Editor</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="create-new-scene-file.html">Create a new Scene file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add-object.html">Adding an object to the scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inspector-view.html">Inspector view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game-objects.html">Game Object types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-properties.html">Scene properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcade-physics.html">Arcade physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-with-parent-objects.html">Working with parent objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object-list.html">Object List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="display-list.html">Display List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input.html">Input</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="prefabs.html">Prefabs</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="prefab-new-file.html">Creating a prefab file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-object.html">The prefab object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-user-properties.html">Prefab user properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-create-instance.html">Creating a prefab instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-code.html">Prefab code generation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-set-properties.html">Changing a property of a prefab instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-variant.html">Prefab variants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-nested.html">Nested prefabs</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Adding children to a prefab instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-black-box.html">Using a prefab as a black box</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="user-components.html">User Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation-tools.html">Manipulation tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layout-tools.html">Layout tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-compiler.html">The scene compiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../code-editor/index.html">Code Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animations-editor/index.html">Animations Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas-editor/index.html">Atlas Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pricing/index.html">License and pricing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #343131" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Phaser Editor 2D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Scene Editor</a> &raquo;</li>
+          <li><a href="prefabs.html">Prefabs</a> &raquo;</li>
+      <li>Adding children to a prefab instance</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="adding-children-to-a-prefab-instance">
+<h1>Adding children to a prefab instance<a class="headerlink" href="#adding-children-to-a-prefab-instance" title="Permalink to this headline"></a></h1>
+<p>Since v3.35.0 of Phaser Editor 2D you can add children to a prefab instance. Sure, it should be an instance of a Layer or Container prefab.</p>
+<p>For backward compatibility, this behavior is disabled by default in prefabs. You should enable it in the <a class="reference external" href="children-properties.html">Children properties section</a>, setting on the <strong>Allow Append Children</strong> parameter. It means you have to checkmark that parameter in a Container or Layer prefab or nested prefab.</p>
+<p>This is a handy feature for creating reusable objects. Let’s see the next example.</p>
+<p>We want to create a reusable dialog object that we can use for showing <em>Level Complete</em> dialog or a <em>Game Paused</em> dialog.</p>
+<p>We create a <strong>DialogPrefab</strong> with a basic structure: a <strong>background</strong> image and a close button. In addition to the structure, it also has a basic behavior: it animates from the bottom of the screen and if you click the <strong>close</strong> button it closes the dialog:</p>
+<img alt="Basic dialog" src="../_images/prefab-children-basic-dialog-20221004.webp" />
+<p>Some considerations:</p>
+<ul class="simple">
+<li><p>For allowing adding new children to the prefab instances, we should check the <strong>Allow Append Children</strong> parameter we mentioned before.</p></li>
+<li><p>Maybe we want to change the texture of the <strong>close</strong> button in prefab instances, so we make it a nested prefab.</p></li>
+</ul>
+<p>Now let’s create the <strong>LevelCompleteDialogPrefab</strong>. It is a new prefab that is a variant of the <strong>DialogPrefab</strong>. It means, the <code class="docutils literal notranslate"><span class="pre">LevelCompleteDialogPrefab</span></code> class extends the <code class="docutils literal notranslate"><span class="pre">DialogPrefab</span></code> class. In this new dialog, we add the <strong>Level Complete</strong> message and three reward stars and change the texture of the <strong>close</strong> button (to green).</p>
+<img alt="The Level Complete dialog prefab" src="../_images/prefab-children-level-complete-dialog-20221004.webp" />
+<p>Notice the new <strong>levelCompleteRibbon</strong>, and the <strong>star1</strong>, <strong>star2</strong>, and <strong>star3</strong> objects, are children of an instance of the <strong>DialogPrefab</strong> prefab. In previous versions of the editor, for getting a similar structure, you had to wrap a <strong>DialogPrefab</strong> with a new container and add the new objects to it. But now, you can add new children to the same prefab instance and at the same time, it inherits the behaviors of the <strong>DialogPrefab</strong>. It doesn’t require any manual delegation of behaviors.</p>
+<img alt="Structure of the Complete Level prefab." src="../_images/prefab-children-level-complete-dialog-outline-20221004.webp" />
+<p>As result, we get the following code of the <code class="docutils literal notranslate"><span class="pre">LevelCompletePrefab</span></code> class:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nx">LevelCompleteDialogPrefab</span> <span class="k">extends</span> <span class="nx">DialogPrefab</span> <span class="p">{</span>
+
+<span class="kr">constructor</span><span class="p">(</span><span class="nx">scene</span><span class="o">:</span> <span class="nx">Phaser</span><span class="p">.</span><span class="nx">Scene</span><span class="p">,</span> <span class="nx">x</span><span class="o">?:</span> <span class="nx">number</span><span class="p">,</span> <span class="nx">y</span><span class="o">?:</span> <span class="nx">number</span><span class="p">)</span> <span class="p">{</span>
+<span class="k">super</span><span class="p">(</span><span class="nx">scene</span><span class="p">,</span> <span class="nx">x</span> <span class="o">??</span> <span class="mf">400</span><span class="p">,</span> <span class="nx">y</span> <span class="o">??</span> <span class="mf">303</span><span class="p">);</span>
+
+<span class="k">this</span><span class="p">.</span><span class="nx">closeButton</span><span class="p">.</span><span class="nx">setTexture</span><span class="p">(</span><span class="s2">&quot;Button Pack - Green_Button Green - Close&quot;</span><span class="p">);</span>
+
+<span class="c1">// levelCompleteRibbon</span>
+<span class="kd">const</span> <span class="nx">levelCompleteRibbon</span> <span class="o">=</span> <span class="nx">scene</span><span class="p">.</span><span class="nx">add</span><span class="p">.</span><span class="nx">image</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">30</span><span class="p">,</span> <span class="s2">&quot;Casual Game GUI_Attribute - Ribbon Green&quot;</span><span class="p">);</span>
+<span class="nx">levelCompleteRibbon</span><span class="p">.</span><span class="nx">scaleX</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">;</span>
+<span class="nx">levelCompleteRibbon</span><span class="p">.</span><span class="nx">scaleY</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">;</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">levelCompleteRibbon</span><span class="p">);</span>
+
+<span class="c1">// star1</span>
+<span class="kd">const</span> <span class="nx">star1</span> <span class="o">=</span> <span class="nx">scene</span><span class="p">.</span><span class="nx">add</span><span class="p">.</span><span class="nx">image</span><span class="p">(</span><span class="o">-</span><span class="mf">89</span><span class="p">,</span> <span class="mf">81</span><span class="p">,</span> <span class="s2">&quot;Casual Game GUI_Icon - Star Yellow&quot;</span><span class="p">);</span>
+<span class="nx">star1</span><span class="p">.</span><span class="nx">scaleX</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">;</span>
+<span class="nx">star1</span><span class="p">.</span><span class="nx">scaleY</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">;</span>
+<span class="nx">star1</span><span class="p">.</span><span class="nx">angle</span> <span class="o">=</span> <span class="o">-</span><span class="mf">10</span><span class="p">;</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">star1</span><span class="p">);</span>
+
+<span class="c1">// star2</span>
+<span class="kd">const</span> <span class="nx">star2</span> <span class="o">=</span> <span class="nx">scene</span><span class="p">.</span><span class="nx">add</span><span class="p">.</span><span class="nx">image</span><span class="p">(</span><span class="o">-</span><span class="mf">2</span><span class="p">,</span> <span class="mf">71</span><span class="p">,</span> <span class="s2">&quot;Casual Game GUI_Icon - Star Yellow&quot;</span><span class="p">);</span>
+<span class="nx">star2</span><span class="p">.</span><span class="nx">scaleX</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">;</span>
+<span class="nx">star2</span><span class="p">.</span><span class="nx">scaleY</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">;</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">star2</span><span class="p">);</span>
+
+<span class="c1">// star3</span>
+<span class="kd">const</span> <span class="nx">star3</span> <span class="o">=</span> <span class="nx">scene</span><span class="p">.</span><span class="nx">add</span><span class="p">.</span><span class="nx">image</span><span class="p">(</span><span class="mf">85</span><span class="p">,</span> <span class="mf">81</span><span class="p">,</span> <span class="s2">&quot;Casual Game GUI_Icon - Star Yellow&quot;</span><span class="p">);</span>
+<span class="nx">star3</span><span class="p">.</span><span class="nx">scaleX</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">;</span>
+<span class="nx">star3</span><span class="p">.</span><span class="nx">scaleY</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">;</span>
+<span class="nx">star3</span><span class="p">.</span><span class="nx">angle</span> <span class="o">=</span> <span class="mf">10</span><span class="p">;</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">star3</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Following the same pattern then we can create a <strong>PauseDialogPrefab</strong>:</p>
+<img alt="Game paused prefab" src="../_images/prefab-children-game-pause-dialog-20221004.webp" />
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="prefab-nested.html" class="btn btn-neutral float-left" title="Nested prefabs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="prefab-black-box.html" class="btn btn-neutral float-right" title="Using a prefab as a black box" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022, Arian Fornaris.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67206336-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-67206336-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

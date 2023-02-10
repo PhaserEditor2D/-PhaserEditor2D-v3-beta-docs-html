@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Automatic creation of the animations &mdash; Phaser Editor 2D Help</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Editing the properties of the animations" href="edit-animations-properties.html" />
+    <link rel="prev" title="Adding animations to the file" href="add-animation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+            <a href="../index.html" class="icon icon-home"> Phaser Editor 2D
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v3.36.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-steps/index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../asset-pack-editor/index.html">Asset Pack Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene-editor/index.html">Scene Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code-editor/index.html">Code Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Animations Editor</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="new-file-wizard.html">Create a new Animations file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add-animation.html">Adding animations to the file</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Automatic creation of the animations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="edit-animations-properties.html">Editing the properties of the animations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adding-deleting-frames.html">Adding and deleting frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compiler.html">Compiling animation key constants</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas-editor/index.html">Atlas Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pricing/index.html">License and pricing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #343131" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Phaser Editor 2D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Animations Editor</a> &raquo;</li>
+      <li>Automatic creation of the animations</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="automatic-creation-of-the-animations">
+<h1>Automatic creation of the animations<a class="headerlink" href="#automatic-creation-of-the-animations" title="Permalink to this headline"></a></h1>
+<p>The most powerful feature of the <a class="reference external" href="../animations-editor/index.html">Animations Editor</a> is the automatic creation of the animations.</p>
+<p>It is a process that allows us to create multiple animations by selecting all the frames required by all the animations.</p>
+<p>This is how it works:</p>
+<ul>
+<li><p>Select a couple of frames in the <a class="reference external" href="../workbench/blocks-view.html">Blocks view</a>. If you select a texture map or spritesheet, all their frames will be considered too.</p>
+<blockquote>
+<div><img alt="Auto build animations." src="../_images/animations-auto-build-1.webp" />
+</div></blockquote>
+</li>
+<li><p>The <strong>Auto Build Animations</strong> section in the <a class="reference external" href="../workbench/inspector-view.html">Inspector view</a> shows a list of animations that can be created. Press the <strong>Build animations</strong> button.</p>
+<blockquote>
+<div><img alt="Auto build animations." src="../_images/animations-auto-build-2.webp" />
+</div></blockquote>
+</li>
+</ul>
+<p>Alternatively, you can drag the frames and drop them into the editor.</p>
+<ul>
+<li><p>It shows a dialog asking for a prefix to be added to the generated animations. It is optional. This could be needed for disambiguation. For example, if the animations to be added has the names <strong>run</strong>, <strong>walk</strong>, <strong>jump</strong>, you can add a prefix like <strong>player-</strong> or <strong>enemy-</strong>, so the animations will have the names <strong>player-run</strong>, <strong>player-walk</strong>, <strong>player-jump</strong>.</p>
+<blockquote>
+<div><img alt="Auto build animations." src="../_images/animations-auto-build-3.webp" />
+</div></blockquote>
+</li>
+<li><p>All the animations will be created with the same parameters (<strong>frameRate</strong>, <strong>repeat</strong>, etc…) but you can change them in the <a class="reference external" href="../workbench/inspector-view.html">Inspector view</a>.</p>
+<blockquote>
+<div><img alt="Auto build animations." src="../_images/animations-auto-build-4.webp" />
+</div></blockquote>
+</li>
+</ul>
+<p>The process of grouping the frames by a common prefix is very simple. To get the prefix of a frame, it removes all the non-alpha characters at the end:</p>
+<p><strong>Input</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">acorn-1</span></code>
+<code class="docutils literal notranslate"><span class="pre">acorn-2</span></code>
+<code class="docutils literal notranslate"><span class="pre">acorn-3</span></code>
+<code class="docutils literal notranslate"><span class="pre">ant-1</span></code>
+<code class="docutils literal notranslate"><span class="pre">ant-2</span></code>
+<code class="docutils literal notranslate"><span class="pre">ant-3</span></code>
+<code class="docutils literal notranslate"><span class="pre">ant-4</span></code>
+<code class="docutils literal notranslate"><span class="pre">ant-5</span></code>
+<code class="docutils literal notranslate"><span class="pre">ant-6</span></code></p>
+<p><strong>Output</strong></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">acorn</span></code> animation</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">acorn-1</span></code> frame</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">acorn-2</span></code> frame</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">acorn-3</span></code> frame</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ant</span></code> animation</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ant-2</span></code> frame</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ant-3</span></code> frame</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ant-4</span></code> frame</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ant-5</span></code> frame</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ant-6</span></code> frame</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>Some texture packing tools include the extension of the images in the name of the frames, for example, <code class="docutils literal notranslate"><span class="pre">ant-1.png</span></code>. It breaks the algorithm of extracting the prefix of a frame. For that reason, it first does the removal of all the image extensions of the frame names, if it is the case. Then <code class="docutils literal notranslate"><span class="pre">ant-1.png</span></code> is converted to <code class="docutils literal notranslate"><span class="pre">ant-1</span></code>, and the prefix will be <code class="docutils literal notranslate"><span class="pre">ant</span></code>.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="add-animation.html" class="btn btn-neutral float-left" title="Adding animations to the file" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="edit-animations-properties.html" class="btn btn-neutral float-right" title="Editing the properties of the animations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022, Arian Fornaris.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67206336-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-67206336-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

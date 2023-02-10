@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arcade physics body properties &mdash; Phaser Editor 2D Help</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Arcade physics collider" href="arcade-physics-collider.html" />
+    <link rel="prev" title="Enabling the Arcade physics on a game object" href="arcade-physics-add-body.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+            <a href="../index.html" class="icon icon-home"> Phaser Editor 2D
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v3.36.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-steps/index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../asset-pack-editor/index.html">Asset Pack Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Scene Editor</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="create-new-scene-file.html">Create a new Scene file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add-object.html">Adding an object to the scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inspector-view.html">Inspector view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game-objects.html">Game Object types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-properties.html">Scene properties</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="arcade-physics.html">Arcade physics</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="arcade-physics-add-object.html">Creating Arcade Image and Sprite objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcade-physics-add-body.html">Enabling the Arcade physics on a game object</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Arcade physics body properties</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#arcade-physics-body-section">Arcade Physics Body section</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#arcade-physics-body-geometry-section">Arcade Physics Body Geometry section</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#arcade-physics-body-movement-section">Arcade Physics Body Movement section</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#arcade-physics-body-collision-section">Arcade Physics Body Collision section</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arcade-physics-collider.html">Arcade physics collider</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="working-with-parent-objects.html">Working with parent objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object-list.html">Object List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="display-list.html">Display List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prefabs.html">Prefabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-components.html">User Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation-tools.html">Manipulation tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layout-tools.html">Layout tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-compiler.html">The scene compiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../code-editor/index.html">Code Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animations-editor/index.html">Animations Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas-editor/index.html">Atlas Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pricing/index.html">License and pricing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #343131" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Phaser Editor 2D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Scene Editor</a> &raquo;</li>
+          <li><a href="arcade-physics.html">Arcade physics</a> &raquo;</li>
+      <li>Arcade physics body properties</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="arcade-physics-body-properties">
+<h1><a class="toc-backref" href="#id1">Arcade physics body properties</a><a class="headerlink" href="#arcade-physics-body-properties" title="Permalink to this headline"></a></h1>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#arcade-physics-body-properties" id="id1">Arcade physics body properties</a></p>
+<ul>
+<li><p><a class="reference internal" href="#arcade-physics-body-section" id="id2">Arcade Physics Body section</a></p></li>
+<li><p><a class="reference internal" href="#arcade-physics-body-geometry-section" id="id3">Arcade Physics Body Geometry section</a></p></li>
+<li><p><a class="reference internal" href="#arcade-physics-body-movement-section" id="id4">Arcade Physics Body Movement section</a></p></li>
+<li><p><a class="reference internal" href="#arcade-physics-body-collision-section" id="id5">Arcade Physics Body Collision section</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>When you select an object, the <a class="reference external" href="../workbench/inspector-view.html">Inspector view</a> shows the editors for editing the Arcade body of the object.</p>
+<p>The properties are grouped by sections:</p>
+<section id="arcade-physics-body-section">
+<h2><a class="toc-backref" href="#id2">Arcade Physics Body section</a><a class="headerlink" href="#arcade-physics-body-section" title="Permalink to this headline"></a></h2>
+<p>It allows changing the type of body to <a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.Body">dynamic</a> or <a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.StaticBody">static</a>. And set the <a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.Body#enable">enable flag</a>:</p>
+<img alt="Arcade Physics Body section." src="../_images/arcade-physics-body-properties-20221006.webp" />
+</section>
+<section id="arcade-physics-body-geometry-section">
+<h2><a class="toc-backref" href="#id3">Arcade Physics Body Geometry section</a><a class="headerlink" href="#arcade-physics-body-geometry-section" title="Permalink to this headline"></a></h2>
+<p>This section contains the properties for setting the offset &amp; size of the body. You can select the body’s shape in the <strong>Geometry</strong> parameter. If the body is rectangular, you can change its <a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.Body#setSize">Size</a>. If the body is circular, you can change its <a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.Body#setCircle">Radius</a>. In both cases, you can change the <a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.Body#setOffset">Offset</a>.</p>
+<img alt="Arcade Physics Body Geometry section." src="../_images/arcade-physics-body-geometry-properties-20221006.webp" />
+<p>Another way of changing the body’s offset and size is activating the <a class="reference external" href="./manipulation-tools.html#arcade-physics-body-tool.html">Arcade Physics Body Tool</a>.</p>
+<p>Also, in the scene context menu, in the <strong>Arcade Physics</strong>, there are the options <strong>Center Body</strong> and <strong>Resize Body To Object Size</strong>. Those commands are also available in the three-dots menu of the properties section:</p>
+<img alt="Arcade Physics Body Geometry section's menu." src="../_images/arcade-physics-body-geaometry-properties-menu-20221006.webp" />
+<p>The <strong>Center Arcade Body</strong> commands places the body at the center of the object. The <strong>Resize Body To Object Size</strong> command centers the body and resizes it to fill the whole object. If the body is circular, it changes the radius to fill the object’s width.</p>
+</section>
+<section id="arcade-physics-body-movement-section">
+<h2><a class="toc-backref" href="#id4">Arcade Physics Body Movement section</a><a class="headerlink" href="#arcade-physics-body-movement-section" title="Permalink to this headline"></a></h2>
+<p>This sections contains all body’s properties related to the movement:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.Body#moves">Move</a></p></li>
+<li><p><a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.Body#velocity">Velocity</a></p></li>
+<li><p><a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.Body#maxVelocity">Max Velocity</a></p></li>
+<li><p><a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.Body#maxSpeed">Max Speed</a></p></li>
+<li><p><a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.Body#allowGravity">Allow Gravity</a></p></li>
+<li><p><a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.Body#gravity">Gravity</a></p></li>
+<li><p><a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.Body#acceleration">Acceleration</a></p></li>
+<li><p><a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.Body#useDamping">Use Damping</a></p></li>
+<li><p><a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.Body#allowDrag">Allow Drag</a></p></li>
+<li><p><a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.Body#drag">Drag</a></p></li>
+<li><p><a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.Body#allowRotation">Allow Rotation</a></p></li>
+<li><p><a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.Body#angularVelocity">Angular Velocity</a></p></li>
+<li><p><a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.Body#angularAcceleration">Angular Acceleration</a></p></li>
+<li><p><a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.Body#angularDrag">Angular Drag</a></p></li>
+<li><p><a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.Body#maxAngular">Max Angular</a></p></li>
+</ul>
+<img alt="Arcade Physics Body Movement section." src="../_images/arcade-physics-body-movement-properties-20221006.webp" />
+</section>
+<section id="arcade-physics-body-collision-section">
+<h2><a class="toc-backref" href="#id5">Arcade Physics Body Collision section</a><a class="headerlink" href="#arcade-physics-body-collision-section" title="Permalink to this headline"></a></h2>
+<p>This section contains the body’s properties related to collision:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.Body#pushable">Pushable</a></p></li>
+<li><p><a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.Body#immovable">Immovable</a></p></li>
+<li><p><a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.Body#mass">Mass</a></p></li>
+<li><p><a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.Body#bounce">Bounce</a></p></li>
+<li><p><a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.Body#friction">Friction</a></p></li>
+<li><p><a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.Body#overlapX">Overlap</a></p></li>
+<li><p><a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.Body#overlapR">OverlapR</a></p></li>
+<li><p><a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.Body#collideWorldBounds">Collide World Bounds</a></p></li>
+<li><p><a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Physics.Arcade.Body#checkCollision">Check Collision</a></p></li>
+</ul>
+<img alt="Arcade Physics Body Collision properties." src="../_images/arcade-physics-body-collision-properties-20221006.webp" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="arcade-physics-add-body.html" class="btn btn-neutral float-left" title="Enabling the Arcade physics on a game object" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="arcade-physics-collider.html" class="btn btn-neutral float-right" title="Arcade physics collider" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022, Arian Fornaris.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67206336-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-67206336-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

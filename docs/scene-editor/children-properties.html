@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Children properties &mdash; Phaser Editor 2D Help</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Transform properties" href="transform-properties.html" />
+    <link rel="prev" title="Parent properties" href="parent-container-properties.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+            <a href="../index.html" class="icon icon-home"> Phaser Editor 2D
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v3.36.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-steps/index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../asset-pack-editor/index.html">Asset Pack Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Scene Editor</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="create-new-scene-file.html">Create a new Scene file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add-object.html">Adding an object to the scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inspector-view.html">Inspector view</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="game-objects.html">Game Object types</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="common-object-properties.html">Common object properties</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="variable-properties.html">Variable properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lists-properties.html">Lists properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="parent-container-properties.html">Parent properties</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Children properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="transform-properties.html">Transform properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="origin-properties.html">Origin properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="flip-properties.html">Flip properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="visible-property.html">Visible property</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alpha-properties.html">Alpha properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tint-properties.html">Tint properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="texture-property.html">Texture property</a></li>
+<li class="toctree-l4"><a class="reference internal" href="text-property.html">Text property</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="image-object.html">Image objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sprite-object.html">Sprite objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tile-sprite-object.html">Tile Sprite objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="text-object.html">Text objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitmap-text-object.html">Bitmap Text objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tilemap-object.html">Tilemap objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tilemap-layer-object.html">Tilemap Layer objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shape-object.html">Shape objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="container-object.html">Container objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layer-object.html">Layer objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="replace-object-type.html">Replacing the type of an object</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="scene-properties.html">Scene properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcade-physics.html">Arcade physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-with-parent-objects.html">Working with parent objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object-list.html">Object List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="display-list.html">Display List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prefabs.html">Prefabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-components.html">User Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation-tools.html">Manipulation tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layout-tools.html">Layout tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-compiler.html">The scene compiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../code-editor/index.html">Code Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animations-editor/index.html">Animations Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas-editor/index.html">Atlas Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pricing/index.html">License and pricing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #343131" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Phaser Editor 2D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Scene Editor</a> &raquo;</li>
+          <li><a href="game-objects.html">Game Object types</a> &raquo;</li>
+          <li><a href="common-object-properties.html">Common object properties</a> &raquo;</li>
+      <li>Children properties</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="children-properties">
+<h1>Children properties<a class="headerlink" href="#children-properties" title="Permalink to this headline"></a></h1>
+<p>The <a class="reference external" href="./container-object.html">containers</a> and <a class="reference external" href="./layer-object.html">layers</a> are objects with children, and share children-based properties.</p>
+<p>The <strong>Children</strong> properties are not part of the <a class="reference external" href="https://phaser.io">Phaser</a> API, they are used only by the editor, in design-time.</p>
+<p>The <strong>Allow Picking Children In Scene</strong> property allows picking a child in the scene. If it is disable, you cannot pick a child by clicking in the scene. This is useful if you want to manipulate the parent container (or layer) and children as a single object.</p>
+<p>The <strong>Show Children In Outline</strong> parameter is similar. It allows showing the container or layer children in the <a class="reference external" href="../workbench/outline-view.html">Outline view</a>.</p>
+<img alt="The Children properties." src="../_images/scene-editor-children-properties-20221004.webp" />
+<p>The <strong>Allow Append Children</strong> parameter indicates this Layer or Container allows adding new children in prefab instances. This parameter has sense only if the object has a nested prefab scope. <a class="reference external" href="./prefab-instance-children.html">Learn more about adding children to a prefab instance</a>.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="parent-container-properties.html" class="btn btn-neutral float-left" title="Parent properties" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="transform-properties.html" class="btn btn-neutral float-right" title="Transform properties" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022, Arian Fornaris.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67206336-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-67206336-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

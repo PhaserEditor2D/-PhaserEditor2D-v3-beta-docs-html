@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Object List &mdash; Phaser Editor 2D Help</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Display List" href="display-list.html" />
+    <link rel="prev" title="Working with parent objects" href="working-with-parent-objects.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+            <a href="../index.html" class="icon icon-home"> Phaser Editor 2D
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v3.36.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-steps/index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../asset-pack-editor/index.html">Asset Pack Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Scene Editor</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="create-new-scene-file.html">Create a new Scene file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add-object.html">Adding an object to the scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inspector-view.html">Inspector view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game-objects.html">Game Object types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-properties.html">Scene properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcade-physics.html">Arcade physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-with-parent-objects.html">Working with parent objects</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Object List</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#object-list-properties">Object List properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#object-list-vs-phaser-group">Object List vs Phaser Group</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="display-list.html">Display List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prefabs.html">Prefabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-components.html">User Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation-tools.html">Manipulation tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layout-tools.html">Layout tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-compiler.html">The scene compiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../code-editor/index.html">Code Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animations-editor/index.html">Animations Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas-editor/index.html">Atlas Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pricing/index.html">License and pricing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #343131" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Phaser Editor 2D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Scene Editor</a> &raquo;</li>
+      <li>Object List</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="object-list">
+<h1>Object List<a class="headerlink" href="#object-list" title="Permalink to this headline"></a></h1>
+<p>Often, you need to group objects with a common property or type, or with a common goal in the game. For example, you need to group the enemy objects, the pickable items, the platform objects, so you can test if the player collides with them.</p>
+<p>For this purpose, the <a class="reference external" href="../scene-editor/index.html">Scene Editor</a> allows grouping the objects of the scene into a JavaScript array.</p>
+<p>You can create an <a class="reference internal" href="#object-list">Object List</a> using by dropping a <a class="reference external" href="blocks-view-integration.html">List built-in block</a> on the scene.</p>
+<img alt="Object list." src="../_images/scene-editor-object-list-04192020.webp" />
+<p>To add an object to an <a class="reference internal" href="#object-list">Object List</a>, you can set the <a class="reference external" href="lists-properties.html">Lists property</a> of the object, in the <a class="reference external" href="../workbench/inspector-view.html">Inspector view</a>.</p>
+<p>The code generated by the <a class="reference external" href="../scene-editor/scene-compiler.html">scene compiler</a>, to create a list, is like this:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">this</span><span class="p">.</span><span class="nx">pickableItems</span> <span class="o">=</span> <span class="p">[</span><span class="nx">melon</span><span class="p">,</span> <span class="nx">melon_1</span><span class="p">,</span> <span class="nx">melon_2</span><span class="p">,</span> <span class="nx">bomb</span><span class="p">,</span> <span class="nx">bomb_1</span><span class="p">,</span> <span class="nx">bomb_2</span><span class="p">];</span>
+</pre></div>
+</div>
+<p>If the output language is TypeScript, the <a class="reference external" href="../scene-editor/scene-compiler.html">scene compiler</a> generates a field declaration for the list:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">private</span> <span class="nx">pickableItems</span><span class="o">:</span> <span class="nb">Array</span><span class="o">&lt;</span><span class="nx">Melon</span><span class="o">|</span><span class="nx">Bomb</span><span class="o">&gt;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Note that the <a class="reference external" href="../scene-editor/scene-compiler.html">scene compiler</a> infers the type of the array elements: a union of <code class="docutils literal notranslate"><span class="pre">Melon</span></code> and <code class="docutils literal notranslate"><span class="pre">Bomb</span></code>, that are <a class="reference external" href="../scene-editor/prefabs.html">prefabs</a>. It also infers the type of the elements if are <a class="reference external" href="https://phaser.io">Phaser</a> built-in types:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">private</span> <span class="nx">parallax</span><span class="o">:</span> <span class="nx">Phaser</span><span class="p">.</span><span class="nx">GameObjects</span><span class="p">.</span><span class="nx">Image</span><span class="p">[];</span>
+</pre></div>
+</div>
+<p>This detailed type declaration of the arrays allows that code editors like <a class="reference external" href="https://code.visualstudio.com">Visual Studio Code</a> can provide a smarter coding experience.</p>
+<section id="object-list-properties">
+<h2>Object List properties<a class="headerlink" href="#object-list-properties" title="Permalink to this headline"></a></h2>
+<p>The <a class="reference internal" href="#object-list">Object List</a> type is not part of the <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/">Phaser API</a>, it is something introduced by the <a class="reference external" href="../scene-editor/index.html">Scene Editor</a>. It has the <a class="reference external" href="variable-properties.html">Variable properties</a> and it also shows the <strong>List</strong> section in the <a class="reference external" href="../workbench/inspector-view.html">Inspector view</a>.</p>
+<img alt="Object List properties." src="../_images/scene-editor-object-list-props-04192020.webp" />
+<p>The <strong>Remove From List</strong> and <strong>Select In Scene</strong> buttons apply to the items selected in the viewer next to them.</p>
+</section>
+<section id="object-list-vs-phaser-group">
+<h2>Object List vs Phaser Group<a class="headerlink" href="#object-list-vs-phaser-group" title="Permalink to this headline"></a></h2>
+<p>Traditionally, <a class="reference external" href="https://phaser.io">Phaser</a> uses the <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.GameObjects.Group.html">Group game object</a> to join objects around a common purpose. But grouping is not the only feature of a <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.GameObjects.Group.html">Group game object</a>:</p>
+<ul class="simple">
+<li><p>It implements an object pool.</p></li>
+<li><p>Is a data structure with methods for sorting and iterate the items.</p></li>
+<li><p>Can be used as a proxy to modify the state of the items.</p></li>
+<li><p>To call a method of the items.</p></li>
+<li><p>To apply game-related global operations to the items.</p></li>
+</ul>
+<p>So, why the <a class="reference external" href="../scene-editor/index.html">Scene Editor</a> is not using the <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.GameObjects.Group.html">Group game object</a>?</p>
+<ol class="arabic">
+<li><p>Many of the features of a <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.GameObjects.Group.html">Group game object</a> are especially helpful to implement the logic of the game, but what a level maker needs is just to organize the objects, we think.</p></li>
+<li><p>The <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.GameObjects.Group.html">Group game object</a> type is not parameterized. A code editor type-inference/auto-completion engine works much better with a simple JavaScript array. When you write <code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">enemies</span> <span class="pre">=</span> <span class="pre">[enemy1,</span> <span class="pre">enemy2,</span> <span class="pre">...]</span></code>, a code editor like <a class="reference external" href="https://code.visualstudio.com">Visual Studio Code</a> can infer the type of the array items.</p></li>
+<li><p>Even for a human, a simple JavaScript array could be more comprehensible.</p></li>
+<li><p>If you need a <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.GameObjects.Group.html">Group game object</a>, you can create it with the array of objects generated by the <a class="reference external" href="../scene-editor/index.html">Scene Editor</a>:</p>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span> <span class="nx">pickableItemsGroup</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">.</span><span class="nx">group</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">pickableItems</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="working-with-parent-objects.html" class="btn btn-neutral float-left" title="Working with parent objects" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="display-list.html" class="btn btn-neutral float-right" title="Display List" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022, Arian Fornaris.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67206336-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-67206336-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nested prefabs &mdash; Phaser Editor 2D Help</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Adding children to a prefab instance" href="prefab-instance-children.html" />
+    <link rel="prev" title="Prefab variants" href="prefab-variant.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+            <a href="../index.html" class="icon icon-home"> Phaser Editor 2D
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v3.36.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-steps/index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../asset-pack-editor/index.html">Asset Pack Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Scene Editor</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="create-new-scene-file.html">Create a new Scene file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add-object.html">Adding an object to the scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inspector-view.html">Inspector view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game-objects.html">Game Object types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-properties.html">Scene properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcade-physics.html">Arcade physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-with-parent-objects.html">Working with parent objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object-list.html">Object List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="display-list.html">Display List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input.html">Input</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="prefabs.html">Prefabs</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="prefab-new-file.html">Creating a prefab file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-object.html">The prefab object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-user-properties.html">Prefab user properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-create-instance.html">Creating a prefab instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-code.html">Prefab code generation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-set-properties.html">Changing a property of a prefab instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-variant.html">Prefab variants</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Nested prefabs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#nested-prefab-instances">Nested prefab instances</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#things-you-cannot-do-with-nested-prefab-instances">Things you cannot do with nested prefab instances</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-instance-children.html">Adding children to a prefab instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-black-box.html">Using a prefab as a black box</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="user-components.html">User Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation-tools.html">Manipulation tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layout-tools.html">Layout tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-compiler.html">The scene compiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../code-editor/index.html">Code Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animations-editor/index.html">Animations Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas-editor/index.html">Atlas Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pricing/index.html">License and pricing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #343131" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Phaser Editor 2D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Scene Editor</a> &raquo;</li>
+          <li><a href="prefabs.html">Prefabs</a> &raquo;</li>
+      <li>Nested prefabs</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="nested-prefabs">
+<h1>Nested prefabs<a class="headerlink" href="#nested-prefabs" title="Permalink to this headline"></a></h1>
+<p>The nested prefab is a powerful concept. Like the overall prefab concept, it is inspired by <a class="reference external" href="https://unity.com">Unity Engine</a>. Its name describes its purpose: allow nesting prefabs.</p>
+<p>There are many cases where your prefab is a compound of objects, and you would like to modify them in prefab instances. For example, look at this <strong>AlienShip</strong> prefab:</p>
+<img alt="AlienShip, a prefab with nested prefabs." src="../_images/scene-editor-nested-prefab-alienship-08182021.webp" />
+<p>It is a <a class="reference external" href="container-object.html">container</a>, with an <strong>alien</strong> and a <strong>ship</strong> children.</p>
+<p>When you create an instance of the <strong>AlienPrefab</strong> (that is an instance of a <a class="reference external" href="container-object.html">container</a>), you can change its position, its scale. It’s custom properties. But you cannot change the properties of the <strong>ship</strong> or the <strong>alien</strong> children.</p>
+<p>But if you declare the <strong>alien</strong> and <strong>ship</strong> objects as nested prefab, you can access them in the prefab instance.</p>
+<p>For setting an object as nested prefab, you select the <strong>Nested Prefab</strong> option in the <strong>Scope</strong> parameter of the <strong>Variable</strong> section:</p>
+<img alt="Setting the nested prefab scope." src="../_images/scene-editor-nested-prefab-scope-08182021.webp" />
+<p>Variables with a <strong>Nested Prefab</strong> scopes are generated in code as public fields. It is like the <strong>Public</strong> scope but allowing to modify the object in prefab instances.</p>
+<section id="nested-prefab-instances">
+<h2>Nested prefab instances<a class="headerlink" href="#nested-prefab-instances" title="Permalink to this headline"></a></h2>
+<p>When you create an instance of a prefab that contains nested prefabs, the <a class="reference external" href="../workbench/outline-view.html">Outline</a> view shows the nested prefabs. Also, the <a class="reference external" href="../scene-editor/index.html">Scene Editor</a> allows selecting the nested prefab instance:</p>
+<img alt="Prefab instance with nested prefabs." src="../_images/scene-editor-nested-prefab-instance-08192021.webp" />
+<p>Note the nested prefab instance <strong>ship</strong> of the <strong>AlienShip</strong>’s prefab instance, has a different texture. Nested prefab instances work just like prefab instances: for changing a property, it first requires unlocking the property:</p>
+<img alt="Changing the texture property of a nested prefab instance." src="../_images/scene-editor-nested-prefab-instance-change-texture-08192021.webp" />
+<p>The code generated for the <strong>alien1</strong> object is like this:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// alien1</span>
+<span class="kd">const</span> <span class="nx">alien1</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">AlienShip</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="mf">142</span><span class="p">,</span> <span class="mf">398</span><span class="p">);</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">.</span><span class="nx">existing</span><span class="p">(</span><span class="nx">alien1</span><span class="p">);</span>
+<span class="nx">alien1</span><span class="p">.</span><span class="nx">ship</span><span class="p">.</span><span class="nx">setTexture</span><span class="p">(</span><span class="s2">&quot;shipYellow&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Note the nested prefab instance <strong>ship</strong> is a field of the prefab instance <strong>alien1</strong>.</p>
+</section>
+<section id="things-you-cannot-do-with-nested-prefab-instances">
+<h2>Things you cannot do with nested prefab instances<a class="headerlink" href="#things-you-cannot-do-with-nested-prefab-instances" title="Permalink to this headline"></a></h2>
+<p>In practice, nested prefabs are like prefabs, with certain differences:</p>
+<p>(Remember a prefab is a type, a template, and a prefab instance is the realization of the prefab in the scene)</p>
+<ul class="simple">
+<li><p>In code, a prefab is a user JavaScript class. A nested prefab is part of a prefab. It is an object referenced by a prefab class field.</p></li>
+<li><p>You cannot define user properties for a nested prefab (check the comment below).</p></li>
+<li><p>You cannot delete a nested prefab instance.</p></li>
+<li><p>You cannot change the type of a nested prefab instance.</p></li>
+</ul>
+<p>A nested prefab is an object that is part of a prefab. Its type can be a built-in <a class="reference external" href="https://phaser.io">Phaser</a> type or a prefab. You cannot define user properties for the nested prefab if it has a <a class="reference external" href="https://phaser.io">Phaser</a> built-in type. But, if it has a prefab as a type, you can define user properties for that prefab. Saying it in other words. If you need to add custom properties to a nested prefab (<strong>A</strong>), then you can create a separated prefab scene (<strong>B</strong>) with user properties, and use that prefab <strong>B</strong> as type creating the nested prefab <strong>A</strong>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="prefab-variant.html" class="btn btn-neutral float-left" title="Prefab variants" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="prefab-instance-children.html" class="btn btn-neutral float-right" title="Adding children to a prefab instance" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022, Arian Fornaris.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67206336-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-67206336-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

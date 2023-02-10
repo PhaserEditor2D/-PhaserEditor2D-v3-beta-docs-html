@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Changing a property of a prefab instance &mdash; Phaser Editor 2D Help</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Prefab variants" href="prefab-variant.html" />
+    <link rel="prev" title="Prefab code generation" href="prefab-code.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+            <a href="../index.html" class="icon icon-home"> Phaser Editor 2D
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v3.36.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-steps/index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../asset-pack-editor/index.html">Asset Pack Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Scene Editor</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="create-new-scene-file.html">Create a new Scene file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add-object.html">Adding an object to the scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inspector-view.html">Inspector view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game-objects.html">Game Object types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-properties.html">Scene properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcade-physics.html">Arcade physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-with-parent-objects.html">Working with parent objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object-list.html">Object List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="display-list.html">Display List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input.html">Input</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="prefabs.html">Prefabs</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="prefab-new-file.html">Creating a prefab file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-object.html">The prefab object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-user-properties.html">Prefab user properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-create-instance.html">Creating a prefab instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-code.html">Prefab code generation</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Changing a property of a prefab instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-variant.html">Prefab variants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-nested.html">Nested prefabs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-instance-children.html">Adding children to a prefab instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-black-box.html">Using a prefab as a black box</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="user-components.html">User Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation-tools.html">Manipulation tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layout-tools.html">Layout tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-compiler.html">The scene compiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../code-editor/index.html">Code Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animations-editor/index.html">Animations Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas-editor/index.html">Atlas Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pricing/index.html">License and pricing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #343131" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Phaser Editor 2D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Scene Editor</a> &raquo;</li>
+          <li><a href="prefabs.html">Prefabs</a> &raquo;</li>
+      <li>Changing a property of a prefab instance</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="changing-a-property-of-a-prefab-instance">
+<h1>Changing a property of a prefab instance<a class="headerlink" href="#changing-a-property-of-a-prefab-instance" title="Permalink to this headline"></a></h1>
+<p>As we explained in the previous sections, a <a class="reference external" href="../scene-editor/prefabs.html">prefab</a> is just a class that extends other <a class="reference external" href="../scene-editor/prefabs.html">prefab</a> class or a <a class="reference external" href="https://phaser.io">Phaser</a> built-in type.</p>
+<p>When you create a <a class="reference external" href="../scene-editor/prefab-create-instance.html">prefab instance</a>, the new object gets the properties set in the <a class="reference external" href="../scene-editor/prefabs.html">prefab</a>. For example, the texture of the new instance is the same texture set in the <a class="reference external" href="../scene-editor/prefabs.html">prefab</a> (in the constructor of the <a class="reference external" href="../scene-editor/prefabs.html">prefab</a> class).</p>
+<p>If you change the texture in the <a class="reference external" href="../scene-editor/prefabs.html">prefab</a>, all the <a class="reference external" href="../scene-editor/prefab-create-instance.html">prefab instances</a> will use the new texture. However, you can unlock the <a class="reference external" href="texture-property.html">texture property</a> of certain instances and set a different texture.</p>
+<p>Note that when you select a <a class="reference external" href="../scene-editor/prefab-create-instance.html">prefab instance</a>, the <a class="reference external" href="../workbench/inspector-view.html">Inspector view</a> shows a “lock” icon next to the object properties. That icon is saying that the property is locked. If you click the icon, it is changed to an “unlocked” icon and means that the property is unlocked.</p>
+<p>When you unlock a property, you can change its value, and it is not going to be updated if the property is changed in the <a class="reference external" href="../scene-editor/prefabs.html">prefab</a>. An unlocked property is not linked to the <a class="reference external" href="../scene-editor/prefabs.html">prefab</a> anymore.</p>
+<p>It is easy to understand if you see it in terms of a class and a class instance. By default, the instance gets the properties set in the class constructor. But you can change that value when you create the instance, and it will remain the same no matter if you change the class constructor.</p>
+<p>Now, if you lock the property again, the property will get the value set in the <a class="reference external" href="../scene-editor/prefabs.html">prefab</a>. Unlocking a property is like reset it to the <a class="reference external" href="../scene-editor/prefabs.html">prefab</a> value.</p>
+<p>Let’s see an example step by step:</p>
+<ol class="arabic">
+<li><p>Create two instances of the <strong>Dragon</strong> <a class="reference external" href="../scene-editor/prefabs.html">prefab</a>. Both instances use the same texture of the <a class="reference external" href="../scene-editor/prefabs.html">prefab</a>: a green dragon:</p>
+<blockquote>
+<div><img alt="Two prefab instances." src="../_images/prefab-set-property-example-1-04212020.webp" />
+</div></blockquote>
+</li>
+<li><p>You want to change the texture of the first instance, so you unlock the <a class="reference external" href="texture-property.html">texture property</a> and select a new image:</p>
+<blockquote>
+<div><img alt="Unlock texture property." src="../_images/prefab-set-property-example-2-04212020.webp" />
+</div></blockquote>
+</li>
+<li><p>You want to see how it looks with a purple texture, but you change it in the <strong>Dragon</strong> <a class="reference external" href="../scene-editor/prefabs.html">prefab</a> file, so, the second <a class="reference external" href="../scene-editor/prefab-create-instance.html">prefab instance</a> will be updated automatically to show the new purple dragon texture:</p>
+<blockquote>
+<div><img alt="You changed the texture in the prefab." src="../_images/prefab-set-property-example-3-04212020.webp" />
+</div></blockquote>
+</li>
+<li><p>Ok, you love the purple color of the dragon, so you want all the <strong>Dragon</strong> <a class="reference external" href="../scene-editor/prefab-create-instance.html">prefab instances</a> to have the same color. To do this, you lock again the <a class="reference external" href="texture-property.html">texture property</a> of the first (yet brown) dragon and it gets the <a class="reference external" href="../scene-editor/prefabs.html">prefab</a> texture: the purple one:</p>
+<blockquote>
+<div><img alt="Both instances with the same prefab texture." src="../_images/prefab-set-property-example-4-04212020.webp" />
+</div></blockquote>
+</li>
+</ol>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="prefab-code.html" class="btn btn-neutral float-left" title="Prefab code generation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="prefab-variant.html" class="btn btn-neutral float-right" title="Prefab variants" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022, Arian Fornaris.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67206336-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-67206336-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

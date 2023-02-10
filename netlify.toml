@@ -1,0 +1,4 @@
+[[headers]]
+    for = "*/_images/*"
+    [headers.values]
+    cache-control = "public, max-age=365000000, immutable"

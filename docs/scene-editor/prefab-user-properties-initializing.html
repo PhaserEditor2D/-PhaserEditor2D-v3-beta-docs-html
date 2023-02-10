@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Initializing other properties &mdash; Phaser Editor 2D Help</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="User properties in a prefab instance" href="prefab-user-properties-prefab-instance.html" />
+    <link rel="prev" title="Scene Key property type" href="prefab-user-properties-scene-key-type.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+            <a href="../index.html" class="icon icon-home"> Phaser Editor 2D
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v3.36.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-steps/index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../asset-pack-editor/index.html">Asset Pack Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Scene Editor</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="create-new-scene-file.html">Create a new Scene file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add-object.html">Adding an object to the scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inspector-view.html">Inspector view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game-objects.html">Game Object types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-properties.html">Scene properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcade-physics.html">Arcade physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-with-parent-objects.html">Working with parent objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object-list.html">Object List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="display-list.html">Display List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input.html">Input</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="prefabs.html">Prefabs</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="prefab-new-file.html">Creating a prefab file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-object.html">The prefab object</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="prefab-user-properties.html">Prefab user properties</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="prefab-user-properties-create.html">Creating a prefab user property</a></li>
+<li class="toctree-l4"><a class="reference internal" href="prefab-user-properties-simple-type.html">Simple property type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="prefab-user-properties-options-type.html">Option property type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="prefab-user-properties-color-type.html">Color property type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="prefab-user-properties-expression-type.html">Expression property type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="prefab-user-properties-object-variable-type.html">Object Variable property type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="prefab-user-properties-object-constructor-type.html">Object Constructor property type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="prefab-user-properties-texture-type.html">Texture Config property type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="prefab-user-properties-asset-key-type.html">Asset Key property type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="prefab-user-properties-animation-key-type.html">Animation Key property type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="prefab-user-properties-audio-key-type.html">Audio Key property type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="prefab-user-properties-scene-key-type.html">Scene Key property type</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Initializing other properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="prefab-user-properties-prefab-instance.html">User properties in a prefab instance</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-create-instance.html">Creating a prefab instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-code.html">Prefab code generation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-set-properties.html">Changing a property of a prefab instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-variant.html">Prefab variants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-nested.html">Nested prefabs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-instance-children.html">Adding children to a prefab instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prefab-black-box.html">Using a prefab as a black box</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="user-components.html">User Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation-tools.html">Manipulation tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layout-tools.html">Layout tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-compiler.html">The scene compiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../code-editor/index.html">Code Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animations-editor/index.html">Animations Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas-editor/index.html">Atlas Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pricing/index.html">License and pricing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #343131" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Phaser Editor 2D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Scene Editor</a> &raquo;</li>
+          <li><a href="prefabs.html">Prefabs</a> &raquo;</li>
+          <li><a href="prefab-user-properties.html">Prefab user properties</a> &raquo;</li>
+      <li>Initializing other properties</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="initializing-other-properties">
+<h1>Initializing other properties<a class="headerlink" href="#initializing-other-properties" title="Permalink to this headline"></a></h1>
+<p>It’s possible you want to change other properties of the prefab instance, in dependence of the values of the user properties. For example, if the <strong>flameType</strong> property value is <code class="docutils literal notranslate"><span class="pre">&quot;fire&quot;</span></code>, then you set the mass of the body to <code class="docutils literal notranslate"><span class="pre">50</span></code>. Because the property values are not set in the constructor, you can listen to the <code class="docutils literal notranslate"><span class="pre">scene-awake</span></code> event and setup the body properties:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nx">Dragon</span> <span class="k">extends</span> <span class="nx">Phaser</span><span class="p">.</span><span class="nx">GameObjects</span><span class="p">.</span><span class="nx">Sprite</span> <span class="p">{</span>
+
+    <span class="kr">constructor</span><span class="p">(</span><span class="nx">scene</span><span class="p">,...)</span> <span class="p">{</span>
+        <span class="p">...</span>
+
+        <span class="cm">/* START-USER-CTR-CODE */</span>
+
+        <span class="nx">scene</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">once</span><span class="p">(</span><span class="s2">&quot;scene-awake&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">awake</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+
+        <span class="cm">/* END-USER-CTR-CODE */</span>
+    <span class="p">}</span>
+
+    <span class="cm">/** @type {&quot;fire&quot;|&quot;smoke&quot;|&quot;laser&quot;} */</span>
+    <span class="nx">flameType</span> <span class="o">=</span> <span class="s2">&quot;fire&quot;</span><span class="p">;</span>
+
+    <span class="cm">/* START-USER-CODE */</span>
+
+    <span class="nx">awake</span><span class="p">()</span> <span class="p">{</span>
+
+        <span class="c1">// at this point, all objects in the scene are created</span>
+        <span class="c1">// and the user properties are set with new values</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">flameType</span> <span class="o">===</span> <span class="s2">&quot;fire&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">mass</span> <span class="o">=</span> <span class="mf">50</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="cm">/* END-USER-CODE */</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>If you enable the <strong>Generate Awake Handler</strong> flag in the <strong>Compiler Prefab Settings</strong>, the <a class="reference external" href="../scene-editor/scene-compiler.html">scene compiler</a> will generate this code for you:</p>
+<img alt="Generate awake event handler." src="../_images/scene-editor-prefab-settings-08212021.webp" />
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nx">Level</span> <span class="k">extends</span> <span class="nx">Phaser</span><span class="p">.</span><span class="nx">GameObjects</span><span class="p">.</span><span class="nx">Image</span> <span class="p">{</span>
+
+    <span class="kr">constructor</span><span class="p">(</span><span class="nx">scene</span><span class="p">,...)</span> <span class="p">{</span>
+
+        <span class="c1">// awake handler</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">scene</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">once</span><span class="p">(</span><span class="s2">&quot;scene-awake&quot;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">awake</span><span class="p">());</span>
+
+        <span class="p">...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>It is your responsibility to write the <code class="docutils literal notranslate"><span class="pre">awake</span></code> method.</p>
+<section id="the-scene-awake-event">
+<h2>The <code class="docutils literal notranslate"><span class="pre">scene-awake</span></code> event<a class="headerlink" href="#the-scene-awake-event" title="Permalink to this headline"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">scene-awake</span></code> event is not part of the <a class="reference external" href="https://phaser.io">Phaser</a> API. It’s a custom event the <a class="reference external" href="../scene-editor/index.html">Scene Editor</a> uses as convention. When the <a class="reference external" href="../scene-editor/scene-compiler.html">scene compiler</a> generates the code of a scene, it also generates the code for emitting the <code class="docutils literal notranslate"><span class="pre">scene-awake</span></code> event. This event is emitted just after all objects are created:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nx">Level</span> <span class="k">extends</span> <span class="nx">Phaser</span><span class="p">.</span><span class="nx">Scene</span> <span class="p">{</span>
+<span class="p">...</span>
+    <span class="nx">editorCreate</span><span class="p">()</span> <span class="p">{</span>
+        <span class="p">...</span>
+
+        <span class="c1">// dragon</span>
+        <span class="kd">const</span> <span class="nx">dragon</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Dragon</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="mf">370</span><span class="p">,</span> <span class="mf">218</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">.</span><span class="nx">existing</span><span class="p">(</span><span class="nx">dragon</span><span class="p">);</span>
+
+        <span class="p">...</span>
+
+        <span class="c1">// dragon (prefab fields)</span>
+        <span class="nx">dragon</span><span class="p">.</span><span class="nx">maxSpeed</span> <span class="o">=</span> <span class="mf">300</span><span class="p">;</span>
+        <span class="nx">dragon</span><span class="p">.</span><span class="nx">flameType</span> <span class="o">=</span> <span class="s2">&quot;smoke&quot;</span><span class="p">;</span>
+        <span class="nx">dragon</span><span class="p">.</span><span class="nx">onClickHandler</span> <span class="o">=</span> <span class="nx">obj</span> <span class="p">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">selectDragon</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>
+        <span class="p">...</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&quot;scene-awake&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>As we mentioned in the previous sections, <a class="reference external" href="../scene-editor/prefabs.html">prefabs</a> and <a class="reference external" href="./user-components.html">user components</a> can listen to this event for reading the values set to the user properties.</p>
+<p>It is important that you keep in mind that if you create a dynamic prefab instance, and it requires the <code class="docutils literal notranslate"><span class="pre">scene-awake</span></code> event, then you should call it manually:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">spawnDino</span><span class="p">(</span><span class="nx">scene</span><span class="p">,</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">flame</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="kd">const</span> <span class="nx">dragon</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Dragon</span><span class="p">(</span><span class="nx">scene</span><span class="p">,</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">);</span>
+    <span class="nx">dragon</span><span class="p">.</span><span class="nx">flameType</span> <span class="o">=</span> <span class="nx">flame</span><span class="p">;</span>
+    <span class="c1">// send the awake notification to the new object</span>
+    <span class="nx">scene</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&quot;scene-awake&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Because the <code class="docutils literal notranslate"><span class="pre">scene-awake</span></code> event is listened once in <a class="reference external" href="../scene-editor/prefabs.html">prefabs</a> and <a class="reference external" href="./user-components.html">user components</a>, only the new objects will be notified.</p>
+<p>As alternative to the <code class="docutils literal notranslate"><span class="pre">scene-awake</span></code> event, you can listen the <code class="docutils literal notranslate"><span class="pre">Phaser.Scenes.Events.UPDATE</span></code> event. It is emitted by the scene at every tick, so you just need to register the listener to be called <strong>once</strong>:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">scene</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">once</span><span class="p">(</span><span class="s2">&quot;Phaser.Scenes.Events.UPDATE&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">start</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Note that if you need to “awake” prefab before the game starts updating, you should listen to the <code class="docutils literal notranslate"><span class="pre">scene-awake</span></code> event.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">scene-awake</span></code> event is also used by components, <a class="reference external" href="./user-components-awake-event.html">learn more about it</a>.</p>
+</section>
+<section id="using-properties-with-custom-definition">
+<h2>Using properties with custom definition<a class="headerlink" href="#using-properties-with-custom-definition" title="Permalink to this headline"></a></h2>
+<p>You can set a user property with a <strong>Custom Definition</strong>:</p>
+<img alt="Set custom definition flag." src="../_images/prefab-user-properties-initializing-custom-prop-07092021.webp" />
+<p>This means, the <a class="reference external" href="../scene-editor/scene-compiler.html">scene compiler</a> skips the definition of the property. For example, if you set the <code class="docutils literal notranslate"><span class="pre">flameType</span></code> as <strong>Custom Definition</strong>, the <code class="docutils literal notranslate"><span class="pre">flameType</span></code> property declaration isn’t generated. Instead, a <code class="docutils literal notranslate"><span class="pre">flameType</span></code> property initialization is included in the constructor:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nx">Dragon</span> <span class="k">extends</span> <span class="nx">Phaser</span><span class="p">.</span><span class="nx">GameObjects</span><span class="p">.</span><span class="nx">Sprite</span> <span class="p">{</span>
+
+    <span class="kr">constructor</span><span class="p">(</span><span class="nx">scene</span><span class="p">,...)</span> <span class="p">{</span>
+        <span class="p">...</span>
+
+        <span class="c1">// the compiler adds this</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">flameType</span> <span class="o">=</span> <span class="s2">&quot;fire&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// the compiler skips this:</span>
+    <span class="c1">// flameType = &quot;fire&quot;;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Then, you can write a custom setter and initialize other fields of the prefab:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nx">Dragon</span> <span class="k">extends</span> <span class="nx">Phaser</span><span class="p">.</span><span class="nx">GameObjects</span><span class="p">.</span><span class="nx">Sprite</span> <span class="p">{</span>
+
+    <span class="kr">constructor</span><span class="p">(</span><span class="nx">scene</span><span class="p">,...)</span> <span class="p">{</span>
+        <span class="p">...</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">flameType</span> <span class="o">=</span> <span class="s2">&quot;fire&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/* START-USER-CODE */</span>
+
+    <span class="nx">set</span> <span class="nx">flameType</span><span class="p">(</span><span class="nx">flameType</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="c1">// update the body with the flameType</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="nx">flameType</span> <span class="o">===</span> <span class="s2">&quot;fire&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">mass</span> <span class="o">=</span> <span class="mf">50</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="cm">/* END-USER-CODE */</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Note that you don’t need to listen for the <code class="docutils literal notranslate"><span class="pre">prefab-awake</span></code> event anymore. Setting the <code class="docutils literal notranslate"><span class="pre">flameType</span></code> property will update the prefab state in the expected way. It’s possible you also need to define a getter for the <code class="docutils literal notranslate"><span class="pre">flameType</span></code>. If that’s the case, you can store its value in a new field, or compute it.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="prefab-user-properties-scene-key-type.html" class="btn btn-neutral float-left" title="Scene Key property type" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="prefab-user-properties-prefab-instance.html" class="btn btn-neutral float-right" title="User properties in a prefab instance" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022, Arian Fornaris.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67206336-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-67206336-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

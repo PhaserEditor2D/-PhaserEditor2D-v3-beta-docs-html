@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asset Pack Editor &mdash; Phaser Editor 2D Help</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Create a new Asset Pack file" href="create-asset-pack-file.html" />
+    <link rel="prev" title="Command palette" href="../workbench/command-palette.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+            <a href="../index.html" class="icon icon-home"> Phaser Editor 2D
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v3.36.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-steps/index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Asset Pack Editor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="create-asset-pack-file.html">Create a new Asset Pack file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asset-pack-file.html">Asset Pack File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editor-content-layout.html">Editor content layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add-file.html">Importing files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="organizing-the-assets.html">Organizing the Asset Pack files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outline-view.html">Outline view integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inspector-view.html">Inspector view integration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../scene-editor/index.html">Scene Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code-editor/index.html">Code Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animations-editor/index.html">Animations Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas-editor/index.html">Atlas Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pricing/index.html">License and pricing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #343131" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Phaser Editor 2D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Asset Pack Editor</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="asset-pack-editor">
+<h1>Asset Pack Editor<a class="headerlink" href="#asset-pack-editor" title="Permalink to this headline"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="create-asset-pack-file.html">Create a new Asset Pack file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="asset-pack-file.html">Asset Pack File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="editor-content-layout.html">Editor content layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="add-file.html">Importing files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="add-file-with-add-button.html">Importing using the Main toolbar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import-from-blocks-view.html">Importing from the Blocks view</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="import-from-blocks-view.html#showing-all-files-in-the-blocks-view">Showing all files in the Blocks view</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="import-from-files-view.html">Importing from the Files view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import-scripts.html">Importing JavaScript files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="import-scripts.html#execution-order-of-the-scripts">Execution order of the scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="public-root.html">Setting the root folder for the asset files</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="organizing-the-assets.html">Organizing the Asset Pack files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outline-view.html">Outline view integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inspector-view.html">Inspector view integration</a></li>
+</ul>
+</div>
+<p>In a <a class="reference external" href="https://phaser.io">Phaser</a> game, you load the files using the methods of the <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.Loader.LoaderPlugin.html">Phaser.Loader.LoaderPlugin</a> class. This is how you can <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.Loader.LoaderPlugin.html#spritesheet__anchor">load a sprite-sheet</a> file:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">this</span><span class="p">.</span><span class="nx">load</span><span class="p">.</span><span class="nx">spritesheet</span><span class="p">(</span><span class="s1">&#39;bot&#39;</span><span class="p">,</span> <span class="s1">&#39;images/robot.png&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">frameWidth</span><span class="o">:</span> <span class="mf">32</span><span class="p">,</span> <span class="nx">frameHeight</span><span class="o">:</span> <span class="mf">38</span> <span class="p">});</span>
+</pre></div>
+</div>
+<p>You pass a key (<code class="docutils literal notranslate"><span class="pre">'bot'</span></code>) to identify the file in the <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.Cache.CacheManager.html">game cache</a>, the URL of the file (<code class="docutils literal notranslate"><span class="pre">'images/robot.png'</span></code>) and a sprite-sheet configuration object, with other information like the frame size.</p>
+<p>Or you can load the file by passing a single argument, a <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.Types.Loader.FileTypes.html#.SpriteSheetFileConfig__anchor">SpriteSheetFileConfig</a> configuration object:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">this</span><span class="p">.</span><span class="nx">load</span><span class="p">.</span><span class="nx">spritesheet</span><span class="p">({</span>
+   <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;bot&#39;</span><span class="p">,</span>
+   <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;images/robot.png&#39;</span><span class="p">,</span>
+   <span class="nx">frameConfig</span><span class="o">:</span> <span class="p">{</span>
+   <span class="nx">frameWidth</span><span class="o">:</span> <span class="mf">32</span><span class="p">,</span>
+   <span class="nx">frameHeight</span><span class="o">:</span> <span class="mf">38</span>
+   <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>Every file type can be loaded using its configuration object, that is just a JSON object. Following this logic, <a class="reference external" href="https://phaser.io">Phaser</a> has a special type of files that contains the configurations of other files: the <a class="reference external" href="../asset-pack-editor/asset-pack-file.html">Asset Pack file</a>.</p>
+<p>You can load an <a class="reference external" href="../asset-pack-editor/asset-pack-file.html">Asset Pack file</a> using the <code class="docutils literal notranslate"><span class="pre">pack(...)</span></code> method of the loader:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">this</span><span class="p">.</span><span class="nx">load</span><span class="p">.</span><span class="nx">pack</span><span class="p">(</span><span class="s2">&quot;level1&quot;</span><span class="p">,</span> <span class="s2">&quot;assets/pack.json&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The Asset Pack Editor allows you to edit an <a class="reference external" href="../asset-pack-editor/asset-pack-file.html">Asset Pack file</a>, making it very easy to load the assets in your game. Instead of spending precious time writing the JSON file by hand, with the <a class="reference external" href="../asset-pack-editor/index.html">Asset Pack Editor</a> you can load your assets with a visual tool and smart operations.</p>
+<img alt="Asset Pack Editor." src="../_images/asset-pack-editor-overview-01012022.webp" />
+<p>The <a class="reference external" href="../asset-pack-editor/asset-pack-file.html">Asset Pack file</a> is relevant in the IDE for two main reasons:</p>
+<ul class="simple">
+<li><p>It is a <a class="reference external" href="https://phaser.io">Phaser</a> built-in format. This means you can create an <a class="reference external" href="../asset-pack-editor/asset-pack-file.html">Asset Pack file</a> with <a class="reference external" href="https://phasereditor2d.com">Phaser Editor 2D</a> and use it in any <a class="reference external" href="https://phaser.io">Phaser</a> project, even if you are using another IDE.</p></li>
+<li><p>The <a class="reference external" href="../scene-editor/index.html">Scene Editor</a> and eventually other tools provided by the IDE are based on <a class="reference external" href="https://phaser.io">Phaser</a>.  This means that the IDE can reuse the <a class="reference external" href="../asset-pack-editor/asset-pack-file.html">Asset Pack file</a> information to load the assets into its internal tools.</p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../workbench/command-palette.html" class="btn btn-neutral float-left" title="Command palette" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="create-asset-pack-file.html" class="btn btn-neutral float-right" title="Create a new Asset Pack file" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022, Arian Fornaris.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67206336-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-67206336-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manipulation tools &mdash; Phaser Editor 2D Help</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Layout tools" href="layout-tools.html" />
+    <link rel="prev" title="Adding User Components to a Prefab" href="user-components-in-prefab-object.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+            <a href="../index.html" class="icon icon-home"> Phaser Editor 2D
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v3.36.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-steps/index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../asset-pack-editor/index.html">Asset Pack Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Scene Editor</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="create-new-scene-file.html">Create a new Scene file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add-object.html">Adding an object to the scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inspector-view.html">Inspector view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game-objects.html">Game Object types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-properties.html">Scene properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcade-physics.html">Arcade physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-with-parent-objects.html">Working with parent objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object-list.html">Object List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="display-list.html">Display List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prefabs.html">Prefabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-components.html">User Components</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Manipulation tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#coordinates">Coordinates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#translate-tool">Translate tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scale-tool">Scale tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rotate-tool">Rotate tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#origin-tool">Origin tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#resize-tool">Resize tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#polygon-tool">Polygon tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#arcade-physics-body-tool">Arcade Physics Body tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#select-region-tool">Select Region tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pan-tool">Pan tool</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="layout-tools.html">Layout tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-compiler.html">The scene compiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../code-editor/index.html">Code Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animations-editor/index.html">Animations Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas-editor/index.html">Atlas Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pricing/index.html">License and pricing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #343131" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Phaser Editor 2D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Scene Editor</a> &raquo;</li>
+      <li>Manipulation tools</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="manipulation-tools">
+<h1><a class="toc-backref" href="#id1">Manipulation tools</a><a class="headerlink" href="#manipulation-tools" title="Permalink to this headline"></a></h1>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#manipulation-tools" id="id1">Manipulation tools</a></p>
+<ul>
+<li><p><a class="reference internal" href="#coordinates" id="id2">Coordinates</a></p></li>
+<li><p><a class="reference internal" href="#translate-tool" id="id3">Translate tool</a></p></li>
+<li><p><a class="reference internal" href="#scale-tool" id="id4">Scale tool</a></p></li>
+<li><p><a class="reference internal" href="#rotate-tool" id="id5">Rotate tool</a></p></li>
+<li><p><a class="reference internal" href="#origin-tool" id="id6">Origin tool</a></p></li>
+<li><p><a class="reference internal" href="#resize-tool" id="id7">Resize tool</a></p></li>
+<li><p><a class="reference internal" href="#polygon-tool" id="id8">Polygon tool</a></p></li>
+<li><p><a class="reference internal" href="#arcade-physics-body-tool" id="id9">Arcade Physics Body tool</a></p></li>
+<li><p><a class="reference internal" href="#select-region-tool" id="id10">Select Region tool</a></p></li>
+<li><p><a class="reference internal" href="#pan-tool" id="id11">Pan tool</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>The manipulator tools are in-scene tools that allow changing properties of the objects.</p>
+<p>Each tool has a command to activate/deactivate it. You can execute the command using a key, the context menu, or the <a class="reference external" href="../workbench/main-toolbar.html">Main toolbar</a>.</p>
+<p>You can activate one tool or the time. Or deactivate the tool.</p>
+<img alt="Manipulators." src="../_images/scene-editor-tools-05242020.webp" />
+<section id="coordinates">
+<h2><a class="toc-backref" href="#id2">Coordinates</a><a class="headerlink" href="#coordinates" title="Permalink to this headline"></a></h2>
+<p>Some tools can be used in a local or global coordinates. You can change the coords in the <strong>Coords</strong> menu of the context menu:</p>
+<img alt="Transformation orientation." src="../_images/scene-editor-tools-coords-05242020.webp" />
+</section>
+<section id="translate-tool">
+<h2><a class="toc-backref" href="#id3">Translate tool</a><a class="headerlink" href="#translate-tool" title="Permalink to this headline"></a></h2>
+<p>This tool allows you to move the objects on the screen. It affects the <strong>X</strong> and <strong>Y</strong> properties.</p>
+<p>You can activate it with the <code class="docutils literal notranslate"><span class="pre">T</span></code> key, or in the context menu or the <a class="reference external" href="../workbench/main-toolbar.html">Main toolbar</a>.</p>
+<p>Drag the red arrow to change the <strong>X</strong>, and the green arrow to change the <strong>Y</strong>.</p>
+<img alt="Translate tool." src="../_images/scene-editor-tools-translate-04262020.webp" />
+</section>
+<section id="scale-tool">
+<h2><a class="toc-backref" href="#id4">Scale tool</a><a class="headerlink" href="#scale-tool" title="Permalink to this headline"></a></h2>
+<p>Activate this tool to change the scale of an object. You can activate it in the context menu, the <a class="reference external" href="../workbench/main-toolbar.html">Main toolbar</a>, or with the <code class="docutils literal notranslate"><span class="pre">S</span></code> key. Keep pressing the <code class="docutils literal notranslate"><span class="pre">Shift</span></code> key if you want to scale proportionally.</p>
+<img alt="Scale tool." src="../_images/scene-editor-tools-scale-04262020.webp" />
+</section>
+<section id="rotate-tool">
+<h2><a class="toc-backref" href="#id5">Rotate tool</a><a class="headerlink" href="#rotate-tool" title="Permalink to this headline"></a></h2>
+<p>This tool changes the angle of the object. You can activate it in the context menu, the <a class="reference external" href="../workbench/main-toolbar.html">Main toolbar</a>, or with the <code class="docutils literal notranslate"><span class="pre">R</span></code> key.</p>
+<img alt="Rotate tool." src="../_images/scene-editor-tools-rotate-04262020.webp" />
+</section>
+<section id="origin-tool">
+<h2><a class="toc-backref" href="#id6">Origin tool</a><a class="headerlink" href="#origin-tool" title="Permalink to this headline"></a></h2>
+<p>With this tool, you can edit the origin of an object. You can activate it in the context menu, the <a class="reference external" href="../workbench/main-toolbar.html">Main toolbar</a>, or with the <code class="docutils literal notranslate"><span class="pre">O</span></code> key.</p>
+<p>In <a class="reference external" href="https://phaser.io">Phaser</a> v3, the rotation pivot of <a class="reference external" href="container-object.html">containers</a> is fixed at <code class="docutils literal notranslate"><span class="pre">x=0,</span> <span class="pre">y=0</span></code>. You cannot change it. However, the <a class="reference internal" href="#origin-tool">origin tool</a> simulates a change of the pivot by moving around the children of the <a class="reference external" href="container-object.html">container</a> but keeping the same global position.</p>
+<img alt="Origin tool." src="../_images/scene-editor-tools-origin-05242020.webp" />
+</section>
+<section id="resize-tool">
+<h2><a class="toc-backref" href="#id7">Resize tool</a><a class="headerlink" href="#resize-tool" title="Permalink to this headline"></a></h2>
+<p>This tool allows for changing the size of some objects like <a class="reference external" href="tile-sprite-object.html">TileSprite</a>, <a class="reference external" href="shape-object.html#rectangle">Rectangle</a>, and <a class="reference external" href="shape-object.html#ellipse">Ellipse</a>.  You can activate it in the context menu or with the <code class="docutils literal notranslate"><span class="pre">Z</span></code> key. Resize the object is not the same of scaling it.</p>
+<img alt="TileSprite size tool." src="../_images/scene-editor-tools-tilesprite-size-04262020.webp" />
+</section>
+<section id="polygon-tool">
+<h2><a class="toc-backref" href="#id8">Polygon tool</a><a class="headerlink" href="#polygon-tool" title="Permalink to this headline"></a></h2>
+<p>The Polygon tool (that you can activate with the <code class="docutils literal notranslate"><span class="pre">Y</span></code> key) shows the polygon’s points in the scene. It allows you:</p>
+<ul class="simple">
+<li><p>Change the position of a point: drag the point with the mouse cursor.</p></li>
+<li><p>Delete a point: move the mouse cursor over the point and press the <cite>Delete</cite> key (or double click). When the cursor is over the point, it is painted in red color.</p></li>
+</ul>
+<img alt="Move polygon point." src="../_images/scene-editor-polygon-edit-points-20220623.webp" />
+<ul class="simple">
+<li><p>Add a new point: move the mouse cursor over a line. It shows a white handler under the cursor, you can drag it for creating a new point.</p></li>
+</ul>
+<img alt="Add new point." src="../_images/scene-editor-polygon-add-point-20220623.webp" />
+<img alt="Add new point." src="../_images/scene-editor-polygon-add-point-2-20220623.webp" />
+</section>
+<section id="arcade-physics-body-tool">
+<h2><a class="toc-backref" href="#id9">Arcade Physics Body tool</a><a class="headerlink" href="#arcade-physics-body-tool" title="Permalink to this headline"></a></h2>
+<p>This tool allows changing the size and offset of an Arcade physics body. You can activate the tool in the scene context menu of by pressing the <code class="docutils literal notranslate"><span class="pre">B</span></code> key.</p>
+<p>There are two type of bodies: circular and rectangular bodies. When you are editing a circular body, the tool shows the body’s circle, the center (offset), and the radius handlers:</p>
+<img alt="Editing the circular body." src="../_images/arcade-physics-body-circle-tool-20221005.webp" />
+<p>If the object has a rectangular body, then the tool shows the offset and size handlers:</p>
+<img alt="Editing the rectangular body." src="../_images/arcade-physics-tool-rect-body-20221006.webp" />
+</section>
+<section id="select-region-tool">
+<h2><a class="toc-backref" href="#id10">Select Region tool</a><a class="headerlink" href="#select-region-tool" title="Permalink to this headline"></a></h2>
+<p>This tool allows you to draw a region in the scene and select all objects inside that zone. You can select it in the toolbar, the context menu or by pressing the <code class="docutils literal notranslate"><span class="pre">Shift+S</span></code> keys. If you keep pressing the <cite>Ctrl</cite> key, the previous selected objects will remain selected.</p>
+<img alt="Select objects in region tool." src="../_images/scene-editor-tools-select-region-06172020.webp" />
+</section>
+<section id="pan-tool">
+<h2><a class="toc-backref" href="#id11">Pan tool</a><a class="headerlink" href="#pan-tool" title="Permalink to this headline"></a></h2>
+<p>This tool allows you to pan the scene. You can activate it with the <code class="docutils literal notranslate"><span class="pre">Space</span></code> key. When it is selected, the mouse cursor is shown with a “grabbing” icon, then you can click on the scene and drag it.</p>
+<p>Also, you can pan the scene by pressing the <code class="docutils literal notranslate"><span class="pre">Alt</span></code> key and dragging the mouse. This method does not require to activate the Pan tool.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="user-components-in-prefab-object.html" class="btn btn-neutral float-left" title="Adding User Components to a Prefab" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="layout-tools.html" class="btn btn-neutral float-right" title="Layout tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022, Arian Fornaris.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67206336-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-67206336-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

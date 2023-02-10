@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blocks view integration &mdash; Phaser Editor 2D Help</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Add built-in object from context menu" href="add-object-context-menu.html" />
+    <link rel="prev" title="Adding an object to the scene" href="add-object.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+            <a href="../index.html" class="icon icon-home"> Phaser Editor 2D
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v3.36.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-steps/index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../asset-pack-editor/index.html">Asset Pack Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Scene Editor</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="create-new-scene-file.html">Create a new Scene file</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="add-object.html">Adding an object to the scene</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Blocks view integration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="add-object-context-menu.html">Add built-in object from context menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="add-object-automatic-container.html">Automatic parenting of new objects</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="inspector-view.html">Inspector view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game-objects.html">Game Object types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-properties.html">Scene properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcade-physics.html">Arcade physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-with-parent-objects.html">Working with parent objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object-list.html">Object List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="display-list.html">Display List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prefabs.html">Prefabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-components.html">User Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation-tools.html">Manipulation tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layout-tools.html">Layout tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-compiler.html">The scene compiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../code-editor/index.html">Code Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animations-editor/index.html">Animations Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas-editor/index.html">Atlas Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pricing/index.html">License and pricing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #343131" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Phaser Editor 2D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Scene Editor</a> &raquo;</li>
+          <li><a href="add-object.html">Adding an object to the scene</a> &raquo;</li>
+      <li>Blocks view integration</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="blocks-view-integration">
+<h1>Blocks view integration<a class="headerlink" href="#blocks-view-integration" title="Permalink to this headline"></a></h1>
+<p>When the <a class="reference external" href="../scene-editor/index.html">Scene Editor</a> is active, the Blocks view shows the “blocks” you can get and drop into the scene, to create new objects. These are the blocks:</p>
+<ul class="simple">
+<li><p>Built-in types. <a class="reference external" href="https://phaser.io">Phaser</a> types and other <a class="reference external" href="https://phasereditor2d.com">Phaser Editor 2D</a> related types.</p></li>
+<li><p>Images packed in an <a class="reference external" href="../asset-pack-editor/asset-pack-file.html">Asset Pack file</a>.</p></li>
+<li><p>The frames of a sprite-sheet or texture map defined in an <a class="reference external" href="../asset-pack-editor/asset-pack-file.html">Asset Pack file</a>.</p></li>
+<li><p><a class="reference external" href="bitmap-text-object.html">Bitmap Fonts</a> packed in an <a class="reference external" href="../asset-pack-editor/asset-pack-file.html">Asset Pack file</a>.</p></li>
+<li><p>The <a class="reference external" href="../scene-editor/prefabs.html">prefabs</a> you created.</p></li>
+</ul>
+<p>The first items shown in the <a class="reference external" href="../workbench/blocks-view.html">Blocks view</a> are the primitive object types supported by the <a class="reference external" href="../scene-editor/index.html">Scene Editor</a>. You can drag on type on drop it into the scene to create an instance of the type, with the default values.</p>
+<p>In case of images, sprites or tile-sprites, the new instance does not contain a texture. If you want to set a texture to the object, you can select one in the <a class="reference external" href="texture-property.html">Texture section</a>.</p>
+<img alt="Add an empty image to the scene." src="../_images/scene-editor-blocks-view--add-empty-image-02242021.webp" />
+<p>However, if you drop an image or texture frame into the scene, the editor creates a new <a class="reference external" href="image-object.html">Image object</a> and sets the dropped texture as the object’s texture.</p>
+<p>Maybe, instead of an <a class="reference external" href="image-object.html">Image</a>, you need to create a <a class="reference external" href="tile-sprite-object.html">TileSprite</a> with the same texture, in that case, you can just <a class="reference external" href="replace-object-type.html">convert it to a TileSprite</a>.</p>
+<p>If you drop a <strong>BitmapFont</strong>, the editor creates a <a class="reference external" href="bitmap-text-object.html">Bitmap Text</a>.</p>
+<p>If you drop a <a class="reference external" href="../scene-editor/prefabs.html">Prefab</a>, the editor creates an instance of it.</p>
+<img alt="Blocks view." src="../_images/scene-editor-blocks-view-02242021.webp" />
+<p>The context menu shows different options for grouping the assets: by type, by Asset Pack file, and by file location:</p>
+<img alt="Grouping the assets." src="../_images/scene-editor-blocks-view-grouping-02282021.webp" />
+<p>Also, the Blocks view’s tab, shows “tab sections” which you can select for filtering the content:</p>
+<img alt="Select different tab-sections for filtering content." src="../_images/scene-editor-blocks-view-tab-section-03012021.webp" />
+<p>Notice that there are three options:</p>
+<p><strong>Built-in</strong>: only the built-in types are shown in the view.</p>
+<p><strong>Prefabs</strong>: only the prefab files are shown.</p>
+<p><strong>Assets</strong>: only the assets defined in Asset Pack files are shown.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="add-object.html" class="btn btn-neutral float-left" title="Adding an object to the scene" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="add-object-context-menu.html" class="btn btn-neutral float-right" title="Add built-in object from context menu" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022, Arian Fornaris.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67206336-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-67206336-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

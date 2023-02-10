@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animations Editor &mdash; Phaser Editor 2D Help</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Create a new Animations file" href="new-file-wizard.html" />
+    <link rel="prev" title="Visual Studio Code compatibility" href="../code-editor/vscode-compatibility.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+            <a href="../index.html" class="icon icon-home"> Phaser Editor 2D
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v3.36.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-steps/index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../asset-pack-editor/index.html">Asset Pack Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene-editor/index.html">Scene Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code-editor/index.html">Code Editor</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Animations Editor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="new-file-wizard.html">Create a new Animations file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add-animation.html">Adding animations to the file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto-build-animations.html">Automatic creation of the animations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="edit-animations-properties.html">Editing the properties of the animations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adding-deleting-frames.html">Adding and deleting frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compiler.html">Compiling animation key constants</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas-editor/index.html">Atlas Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pricing/index.html">License and pricing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #343131" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Phaser Editor 2D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Animations Editor</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="animations-editor">
+<h1>Animations Editor<a class="headerlink" href="#animations-editor" title="Permalink to this headline"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="new-file-wizard.html">Create a new Animations file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="add-animation.html">Adding animations to the file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auto-build-animations.html">Automatic creation of the animations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="edit-animations-properties.html">Editing the properties of the animations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adding-deleting-frames.html">Adding and deleting frames</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compiler.html">Compiling animation key constants</a></li>
+</ul>
+</div>
+<p><a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.Animations.Animation.html">Sprite animations</a> are the most frequent option to animate characters in <a class="reference external" href="https://phaser.io">Phaser</a> games. The principle of this animation technique is the displaying of a sequence of images (frames), at a given “speed” or frame rate.</p>
+<p>Animation:</p>
+<img alt="Eagle animation." src="../_images/eagle.gif" />
+<p>Animation frames:</p>
+<img alt="Eagle animation frames." src="../_images/eagle-spritesheet.webp" />
+<p>In <a class="reference external" href="https://phaser.io">Phaser</a> v3, the animations are <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.Animations.AnimationManager.html#create__anchor">created</a> as global objects, in the <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.Animations.AnimationManager.html">animations manager</a>:</p>
+<p>You can create a single animation:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">this</span><span class="p">.</span><span class="nx">anims</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span>
+    <span class="s2">&quot;key&quot;</span><span class="o">:</span> <span class="s2">&quot;acorn&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;frameRate&quot;</span><span class="o">:</span> <span class="mf">12</span><span class="p">,</span>
+    <span class="s2">&quot;repeat&quot;</span><span class="o">:</span> <span class="o">-</span><span class="mf">1</span><span class="p">,</span>
+    <span class="s2">&quot;frames&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+        <span class="s2">&quot;key&quot;</span><span class="o">:</span> <span class="s2">&quot;atlas&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;frame&quot;</span><span class="o">:</span> <span class="s2">&quot;acorn-1&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+        <span class="s2">&quot;key&quot;</span><span class="o">:</span> <span class="s2">&quot;atlas&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;frame&quot;</span><span class="o">:</span> <span class="s2">&quot;acorn-2&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+        <span class="s2">&quot;key&quot;</span><span class="o">:</span> <span class="s2">&quot;atlas&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;frame&quot;</span><span class="o">:</span> <span class="s2">&quot;acorn-3&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>Or multiple animations:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">this</span><span class="p">.</span><span class="nx">anims</span><span class="p">.</span><span class="nx">fromJSON</span><span class="p">(</span>
+    <span class="s2">&quot;anims&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="o">:</span> <span class="s2">&quot;acorn&quot;</span><span class="p">,</span>
+            <span class="c1">// ....</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;key&quot;</span><span class="o">:</span> <span class="s2">&quot;player&quot;</span><span class="p">,</span>
+            <span class="c1">// ....</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+<p>in the practice, you create all the animations once in the game, probably in the preloader scene. Then, you can play an animation on a sprite object passing the animation key to the <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.GameObjects.Sprite.html#play__anchor">play(..)</a> method:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">mySprite</span><span class="p">.</span><span class="nx">play</span><span class="p">(</span><span class="s2">&quot;acorn&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Other way to create the animations is packing them all in a single JSON file, and load the file using the <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.Loader.LoaderPlugin.html#animation__anchor">this.load.animation(..)</a> method:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">this</span><span class="p">.</span><span class="nx">load</span><span class="p">.</span><span class="nx">animation</span><span class="p">(</span><span class="s2">&quot;my-anims&quot;</span><span class="p">,</span> <span class="s2">&quot;assets/animations.json&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="https://phasereditor2d.com">Phaser Editor 2D</a> provides the <a class="reference external" href="../animations-editor/index.html">Animations Editor</a>, to create the animations JSON file. So, the workflow is very simple:</p>
+<ul class="simple">
+<li><p>Create the animations JSON file with the <a class="reference external" href="../animations-editor/index.html">Animations Editor</a>.</p></li>
+<li><p>Import the animations JSON file into an <strong>Asset Pack</strong> file with the <a class="reference external" href="../asset-pack-editor/index.html">Asset Pack Editor</a>.</p></li>
+<li><p>Play the animations in your code, with the <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.GameObjects.Sprite.html#play__anchor">play(..)</a> method.</p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../code-editor/vscode-compatibility.html" class="btn btn-neutral float-left" title="Visual Studio Code compatibility" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="new-file-wizard.html" class="btn btn-neutral float-right" title="Create a new Animations file" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022, Arian Fornaris.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67206336-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-67206336-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

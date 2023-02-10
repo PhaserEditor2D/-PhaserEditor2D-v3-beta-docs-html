@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visual Studio Code compatibility &mdash; Phaser Editor 2D Help</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Animations Editor" href="../animations-editor/index.html" />
+    <link rel="prev" title="Code Editor" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+            <a href="../index.html" class="icon icon-home"> Phaser Editor 2D
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v3.36.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-steps/index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../asset-pack-editor/index.html">Asset Pack Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene-editor/index.html">Scene Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Code Editor</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Visual Studio Code compatibility</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#project-structure">Project structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-server">Code Server</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../animations-editor/index.html">Animations Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas-editor/index.html">Atlas Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pricing/index.html">License and pricing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #343131" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Phaser Editor 2D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Code Editor</a> &raquo;</li>
+      <li>Visual Studio Code compatibility</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="visual-studio-code-compatibility">
+<h1>Visual Studio Code compatibility<a class="headerlink" href="#visual-studio-code-compatibility" title="Permalink to this headline"></a></h1>
+<p>The <a class="reference external" href="https://code.visualstudio.com">Visual Studio Code</a> editor is prefect for writing the code of the <a class="reference external" href="https://phasereditor2d.com">Phaser Editor 2D</a> games. First, t is extremely popular and powerful. Second, cause the projects created by <a class="reference external" href="https://phasereditor2d.com">Phaser Editor 2D</a> contains the files needed by <a class="reference external" href="https://code.visualstudio.com">Visual Studio Code</a> to provide a good coding experience with <a class="reference external" href="https://phaser.io">Phaser</a>.</p>
+<section id="project-structure">
+<h2>Project structure<a class="headerlink" href="#project-structure" title="Permalink to this headline"></a></h2>
+<p>The JavaScript project templates include these files:</p>
+<img alt="JavaScript project." src="../_images/code-editor-vscode-js-05012020.webp" />
+<ol class="arabic simple">
+<li><p>The file <code class="docutils literal notranslate"><span class="pre">lib/phaser.js</span></code>. It is the <a class="reference external" href="https://phaser.io">Phaser</a> runtime.</p></li>
+<li><p>The <a class="reference external" href="https://phaser.io">Phaser</a> type definition files: <code class="docutils literal notranslate"><span class="pre">types/phaser.d.ts</span></code> and <code class="docutils literal notranslate"><span class="pre">types/matter.d.ts</span></code>. Those files are provided by <a class="reference external" href="https://phaser.io">Phaser</a> and are used by the <a class="reference external" href="https://code.visualstudio.com">Visual Studio Code</a> to “understand” the <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/">Phaser API</a>.</p></li>
+<li><p>The <a class="reference external" href="https://code.visualstudio.com/docs/languages/jsconfig">project configuration</a> file: <code class="docutils literal notranslate"><span class="pre">jsconfig.json</span></code>.</p></li>
+</ol>
+<blockquote>
+<div><p>If it is a TypeScript project, then it includes the <a class="reference external" href="https://www.typescriptlang.org/docs/handbook/tsconfig-json.html">tsconfig.json file</a>, instead of the <code class="docutils literal notranslate"><span class="pre">jsconfig.json</span></code> file.</p>
+</div></blockquote>
+</section>
+<section id="code-server">
+<h2>Code Server<a class="headerlink" href="#code-server" title="Permalink to this headline"></a></h2>
+<p>If you are using a remote instance of <a class="reference external" href="https://phasereditor2d.com">Phaser Editor 2D</a>, you can try <a class="reference external" href="https://github.com/cdr/code-server/">Code Server</a>. It allows to run VS Code in the same <a class="reference external" href="https://phasereditor2d.com">Phaser Editor 2D</a> server and edit the game code in your local browser.</p>
+<p>Also, you can use cloud services like GitHub Code Spaces or Gitpod. In both cases you can install Phaser Editor 2D Core as a project dependency and run it alongside with VS Code.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Code Editor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../animations-editor/index.html" class="btn btn-neutral float-right" title="Animations Editor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022, Arian Fornaris.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67206336-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-67206336-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editors &mdash; Phaser Editor 2D Help</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Files view" href="files-view.html" />
+    <link rel="prev" title="Views" href="views.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+            <a href="../index.html" class="icon icon-home"> Phaser Editor 2D
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v3.36.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-steps/index.html">First steps</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Workbench</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="views.html">Views</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Editors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dirty-state">Dirty state</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#title-image">Title image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#title-menu">Title menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#restore-editors">Restore editors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="files-view.html">Files view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inspector-view.html">Inspector view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outline-view.html">Outline view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blocks-view.html">Blocks view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main-toolbar.html">Main toolbar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main-menu.html">Main menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="playing-project.html">Playing the project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects.html">Projects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new-file-dialog.html">New File dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upload-dialog.html">Upload dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="color-themes.html">Color themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command-palette.html">Command palette</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../asset-pack-editor/index.html">Asset Pack Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene-editor/index.html">Scene Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code-editor/index.html">Code Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animations-editor/index.html">Animations Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas-editor/index.html">Atlas Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pricing/index.html">License and pricing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #343131" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Phaser Editor 2D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Workbench</a> &raquo;</li>
+      <li>Editors</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="editors">
+<h1>Editors<a class="headerlink" href="#editors" title="Permalink to this headline"></a></h1>
+<p>An editor is a panel that is dedicated to editing an object or input. It has a title and a content area. The title shows the name or identifier of the input object and the content area provides the UI elements to edit the input. In the majority of the cases, the input of an editor is a file.</p>
+<section id="dirty-state">
+<h2>Dirty state<a class="headerlink" href="#dirty-state" title="Permalink to this headline"></a></h2>
+<p>An important characteristic of the editors is the “dirty” state. When the user changes something in the editor, the editor is labeled as “dirty” and indicates that it should be saved to persist the changes. If you close an editor but it is dirty, it shows a confirmation message, because the changes will be lost.</p>
+<img alt="Editor dirty state and content preview." src="../_images/workbench-editor-dirty-04042020.jpg" />
+</section>
+<section id="title-image">
+<h2>Title image<a class="headerlink" href="#title-image" title="Permalink to this headline"></a></h2>
+<p>The title of an editor, in many cases, shows a preview of the content of the input. It is the case of scenes or images. This helps to identify the input of an editor when you have some of them open.</p>
+<p>You can make the title image bigger or smaller, by pressing <code class="docutils literal notranslate"><span class="pre">Ctrl+3</span></code> and <code class="docutils literal notranslate"><span class="pre">Ctrl+4</span></code>.</p>
+<img alt="Title image size." src="../_images/workbench-editor-title-small-04052020.jpg" />
+</section>
+<section id="title-menu">
+<h2>Title menu<a class="headerlink" href="#title-menu" title="Permalink to this headline"></a></h2>
+<p>The editor’s title provides a context menu with a couple of options. To close the editor, close other editors or change the title’s image size:</p>
+<img alt="The context menu of the editor's title." src="../_images/workbench-editor-title-menu-04052020.jpg" />
+</section>
+<section id="restore-editors">
+<h2>Restore editors<a class="headerlink" href="#restore-editors" title="Permalink to this headline"></a></h2>
+<p>When you open a project, the IDE opens the editors used in the previous session. This information is stored in the local storage of the browser. This means, it is not present in other browser instance or you can remove it by clearing the browser private data.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="views.html" class="btn btn-neutral float-left" title="Views" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="files-view.html" class="btn btn-neutral float-right" title="Files view" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022, Arian Fornaris.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67206336-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-67206336-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

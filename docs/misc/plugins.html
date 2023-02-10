@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plugins &mdash; Phaser Editor 2D Help</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="License and pricing" href="../pricing/index.html" />
+    <link rel="prev" title="Updating the editor" href="update.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+            <a href="../index.html" class="icon icon-home"> Phaser Editor 2D
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v3.36.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-steps/index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../asset-pack-editor/index.html">Asset Pack Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene-editor/index.html">Scene Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code-editor/index.html">Code Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animations-editor/index.html">Animations Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas-editor/index.html">Atlas Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Miscellaneous</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="project-config.html">Project configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server-options.html">Server options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources-caching.html">Resources caching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources-filtering.html">Resources filtering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="local-preferences.html">Local preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content-viewers.html">Content viewers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="update.html">Updating the editor</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#built-in-plugins">Built-in plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#global-plugins">Global plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#project-s-plugins">Project’s plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#project-s-npm-packages">Project’s NPM packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extra-plugins">Extra plugins</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../pricing/index.html">License and pricing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #343131" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Phaser Editor 2D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Miscellaneous</a> &raquo;</li>
+      <li>Plugins</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="plugins">
+<h1>Plugins<a class="headerlink" href="#plugins" title="Permalink to this headline"></a></h1>
+<p>The <a class="reference external" href="../workkbench/index.html">Phaser Editor 2D Workbench</a> and Phaser development tools are based on plugins.</p>
+<p>There are two groups of plugins, built-in and user plugins. The built-in plugins are provided by the editor’s installation. You can install user plugins in your game project or globally.</p>
+<p>You can search for user plugins in the <a class="reference external" href="https://marketplace.phasereditor2d.com/plugins/">Plugins section of the marketplace</a>.</p>
+<section id="built-in-plugins">
+<h2>Built-in plugins<a class="headerlink" href="#built-in-plugins" title="Permalink to this headline"></a></h2>
+<p>The editor’s built-in plugins are included in the installation of the editor. These plugins contain the whole workbench and Phaser development tools. You never need to “touch” these plugins, unless you want to run a different version of the editor. For example, if you want to try an in-development version of the editor, you can use the <code class="docutils literal notranslate"><span class="pre">-editor</span></code> flag for setting the path to another implementation of the editor, including the new plugins.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ PhaserEditor2D -project <span class="s2">&quot;/path/to/project&quot;</span> -editor <span class="s2">&quot;path/to/another/editor&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="global-plugins">
+<h2>Global plugins<a class="headerlink" href="#global-plugins" title="Permalink to this headline"></a></h2>
+<p>You can install plugins globally for all installations of the editor. Just place the plugins in the <code class="docutils literal notranslate"><span class="pre">&lt;user-home&gt;/.phasereditor2d/plugins</span></code> folder.</p>
+</section>
+<section id="project-s-plugins">
+<h2>Project’s plugins<a class="headerlink" href="#project-s-plugins" title="Permalink to this headline"></a></h2>
+<p>You can provision plugins only for your project. The way is to specify the plugins folders in the <a class="reference external" href="./project-config.html">project configuration file</a> <code class="docutils literal notranslate"><span class="pre">phasereditor2d.config.json</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span>
+    <span class="s2">&quot;plugins&quot;</span>: <span class="o">[</span><span class="s2">&quot;./my-fonts-plugins&quot;</span>, <span class="s2">&quot;./my-gameobjects-plugins&quot;</span><span class="o">]</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>All paths are relative to the project’s location.</p>
+</section>
+<section id="project-s-npm-packages">
+<h2>Project’s NPM packages<a class="headerlink" href="#project-s-npm-packages" title="Permalink to this headline"></a></h2>
+<p>You can install plugins via <a class="reference external" href="https://www.npmjs.com">NPM</a> packages.</p>
+<p>When you start <a class="reference external" href="../intro/core.html">Phaser Editor 2D Core</a> in a project, it looks for all node modules installed in the <code class="docutils literal notranslate"><span class="pre">devDependencies</span></code> section of the <code class="docutils literal notranslate"><span class="pre">package.json</span></code> file and loads the plugins wrapped by the packages.</p>
+<p>For example, you can install the <a class="reference external" href="https://www.npmjs.com/package/phasereditor2d-ninepatch-plugin">phasereditor2d-ninepatch-plugin</a> this way:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ npm install phasereditor2d-ninepatch-plugin --save-dev
+</pre></div>
+</div>
+<p>We recommend installing third-party plugins this way.</p>
+</section>
+<section id="extra-plugins">
+<h2>Extra plugins<a class="headerlink" href="#extra-plugins" title="Permalink to this headline"></a></h2>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">-plugins</span></code> flag of <a class="reference external" href="../intro/core.html">Phaser Editor 2D Core</a> for loading extra plugins:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ PhaserEditor2D -plugins <span class="s2">&quot;/demo/plugins;/some/extra/plugins&quot;</span> -project .
+</pre></div>
+</div>
+<p>The argument of the <code class="docutils literal notranslate"><span class="pre">-plugins</span></code> flag is a string with the absolute paths of the extra plugins, separated by a semicolon <code class="docutils literal notranslate"><span class="pre">;</span></code>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="update.html" class="btn btn-neutral float-left" title="Updating the editor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../pricing/index.html" class="btn btn-neutral float-right" title="License and pricing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022, Arian Fornaris.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67206336-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-67206336-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

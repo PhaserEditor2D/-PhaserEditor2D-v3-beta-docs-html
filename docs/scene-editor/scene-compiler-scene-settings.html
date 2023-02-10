@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scene settings &mdash; Phaser Editor 2D Help</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Troubleshooting" href="troubleshooting.html" />
+    <link rel="prev" title="Compiler settings" href="scene-compiler-general-settings.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+            <a href="../index.html" class="icon icon-home"> Phaser Editor 2D
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v3.36.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-steps/index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../asset-pack-editor/index.html">Asset Pack Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Scene Editor</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="create-new-scene-file.html">Create a new Scene file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add-object.html">Adding an object to the scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inspector-view.html">Inspector view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game-objects.html">Game Object types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-properties.html">Scene properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcade-physics.html">Arcade physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-with-parent-objects.html">Working with parent objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object-list.html">Object List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="display-list.html">Display List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prefabs.html">Prefabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-components.html">User Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation-tools.html">Manipulation tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layout-tools.html">Layout tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="scene-compiler.html">The scene compiler</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="scene-compiler-executing-compiler.html">Executing the compiler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scene-compiler-user-code.html">User code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scene-compiler-general-settings.html">Compiler settings</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Scene settings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../code-editor/index.html">Code Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animations-editor/index.html">Animations Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas-editor/index.html">Atlas Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pricing/index.html">License and pricing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #343131" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Phaser Editor 2D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Scene Editor</a> &raquo;</li>
+          <li><a href="scene-compiler.html">The scene compiler</a> &raquo;</li>
+      <li>Scene settings</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="scene-settings">
+<h1>Scene settings<a class="headerlink" href="#scene-settings" title="Permalink to this headline"></a></h1>
+<p>The compilation of a <a class="reference external" href="https://phaser.io">Phaser</a> scene can be tweaked with the <strong>Compiler Scene Settings</strong>:</p>
+<img alt="Scene settings." src="../_images/scene-compiler-scene-settings-04272020.webp" />
+<ul>
+<li><p><strong>Scene Key</strong>: you can set the <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.Types.Scenes.html#.SettingsConfig">Phaser.Scene configuration key</a>. Is optional.</p></li>
+<li><p><strong>Only Generate Methods</strong>: if checked, instead of generate a <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.Types.Scenes.html">Phaser.Scene</a> class, the compiler generates only the <strong>create</strong> and <strong>preload</strong> methods:</p>
+<blockquote>
+<div><img alt="Only generate methods." src="../_images/scene-compiler-scene-settings-only-methods-04272020.webp" />
+<p>This could be useful if you want to create the objects using any context:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">create</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">anySceneLikeContext</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p><strong>Create Method</strong>: the compiler generates all the “creation code” in a method with the name you set in this parameter. By default, the name is <code class="docutils literal notranslate"><span class="pre">editorCreate</span></code>. The first time you create a scene, it has a <code class="docutils literal notranslate"><span class="pre">create</span></code> method that calls the <code class="docutils literal notranslate"><span class="pre">editorCreate</span></code> method generated by the editor:</p>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="cm">/* START OF COMPILED CODE */</span>
+
+<span class="kd">class</span> <span class="nx">Level2</span> <span class="k">extends</span> <span class="nx">Phaser</span><span class="p">.</span><span class="nx">Scene</span> <span class="p">{</span>
+
+    <span class="kr">constructor</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">(</span><span class="s2">&quot;Level2&quot;</span><span class="p">);</span>
+
+    <span class="p">}</span>
+
+    <span class="nx">editorCreate</span><span class="p">()</span> <span class="p">{</span>
+
+        <span class="c1">// dino</span>
+        <span class="kd">const</span> <span class="nx">dino</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">.</span><span class="nx">image</span><span class="p">(</span><span class="mf">346</span><span class="p">,</span> <span class="mf">233</span><span class="p">,</span> <span class="s2">&quot;dino&quot;</span><span class="p">);</span>
+
+        <span class="c1">// fields</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">dino</span> <span class="o">=</span> <span class="nx">dino</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/* START-USER-CODE */</span>
+
+    <span class="c1">// this is the method called by Phaser,</span>
+    <span class="c1">// when the scene is created.</span>
+    <span class="nx">create</span><span class="p">()</span> <span class="p">{</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="nx">editorCreate</span><span class="p">();</span>
+
+        <span class="c1">// you can add more code here</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="nx">dino</span><span class="p">.</span><span class="nx">setInteractive</span><span class="p">()</span>
+            <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;pointerdown&quot;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                <span class="c1">// do something</span>
+            <span class="p">});</span>
+    <span class="p">}</span>
+
+    <span class="cm">/* END-USER-CODE */</span>
+<span class="p">}</span>
+
+<span class="cm">/* END OF COMPILED CODE */</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p><strong>Preload Pack Files</strong>: you can select the pack files to be loaded in the scene. If you click on the button, it opens the <strong>Select Pack Files</strong> dialog:</p>
+<blockquote>
+<div><img alt="Load asset pack files." src="../_images/scene-compiler-scene-settings-load-pack-file-04272020.webp" />
+</div></blockquote>
+</li>
+</ul>
+<blockquote>
+<div><p>If you select to load a pack file, then the compiler generates a <strong>preload</strong> method:</p>
+<blockquote>
+<div><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nx">Level</span> <span class="k">extends</span> <span class="nx">Phaser</span><span class="p">.</span><span class="nx">Scene</span> <span class="p">{</span>
+
+    <span class="nx">preload</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">load</span><span class="p">.</span><span class="nx">pack</span><span class="p">(</span><span class="s2">&quot;asset-pack&quot;</span><span class="p">,</span> <span class="s2">&quot;assets/asset-pack.json&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">create</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// ...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>Preload Method</strong>: like the <strong>Create Method</strong>, you can change the name of the <strong>preload</strong> method generated by the compiler. Then, you can write your own <strong>preload</strong> method and call the one of the editor.</p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="scene-compiler-general-settings.html" class="btn btn-neutral float-left" title="Compiler settings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="troubleshooting.html" class="btn btn-neutral float-right" title="Troubleshooting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022, Arian Fornaris.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67206336-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-67206336-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

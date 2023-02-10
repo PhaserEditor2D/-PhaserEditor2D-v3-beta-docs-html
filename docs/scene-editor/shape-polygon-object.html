@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Polygon &mdash; Phaser Editor 2D Help</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Container objects" href="container-object.html" />
+    <link rel="prev" title="Triangle" href="shape-triangle-object.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+            <a href="../index.html" class="icon icon-home"> Phaser Editor 2D
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v3.36.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-steps/index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../asset-pack-editor/index.html">Asset Pack Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Scene Editor</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="create-new-scene-file.html">Create a new Scene file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add-object.html">Adding an object to the scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inspector-view.html">Inspector view</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="game-objects.html">Game Object types</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="common-object-properties.html">Common object properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="image-object.html">Image objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sprite-object.html">Sprite objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tile-sprite-object.html">Tile Sprite objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="text-object.html">Text objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitmap-text-object.html">Bitmap Text objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tilemap-object.html">Tilemap objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tilemap-layer-object.html">Tilemap Layer objects</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="shape-object.html">Shape objects</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="shape-rectangle-object.html">Rectangle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shape-ellipse-object.html">Ellipse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shape-triangle-object.html">Triangle</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Polygon</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="container-object.html">Container objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layer-object.html">Layer objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="replace-object-type.html">Replacing the type of an object</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="scene-properties.html">Scene properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcade-physics.html">Arcade physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-with-parent-objects.html">Working with parent objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object-list.html">Object List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="display-list.html">Display List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prefabs.html">Prefabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-components.html">User Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation-tools.html">Manipulation tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layout-tools.html">Layout tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-compiler.html">The scene compiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../code-editor/index.html">Code Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animations-editor/index.html">Animations Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas-editor/index.html">Atlas Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pricing/index.html">License and pricing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #343131" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Phaser Editor 2D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Scene Editor</a> &raquo;</li>
+          <li><a href="game-objects.html">Game Object types</a> &raquo;</li>
+          <li><a href="shape-object.html">Shape objects</a> &raquo;</li>
+      <li>Polygon</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="polygon">
+<h1>Polygon<a class="headerlink" href="#polygon" title="Permalink to this headline"></a></h1>
+<p>You can create <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.GameObjects.Polygon.html">Polygon</a> object by dropping the <strong>Polygon</strong> block, from the <a class="reference external" href="../workbench/blocks-view.html">Blocks view</a>, on the scene.</p>
+<img alt="Create a polygon." src="../_images/scene-editor-polygon-create-20220623.webp" />
+<p>A polygon is made with points. You can edit the points in the <strong>Polygon section</strong> or with the <a class="reference external" href="manipulation-tools.html#polygon-tool">Polygon tool</a>.</p>
+<p>The Polygon section shows the Points field. The points are presented as a string of the X Y pairs of the points, separated by a space.</p>
+<img alt="Polygon section." src="../_images/scene-editor-polygon-section-20220623.webp" />
+<p>The Polygon tool (that you can activate with the <code class="docutils literal notranslate"><span class="pre">Y</span></code> key) shows the polygon’s points in the scene. It allows you:</p>
+<ul class="simple">
+<li><p>Change the position of a point: drag the point with the mouse cursor.</p></li>
+<li><p>Delete a point: move the mouse cursor over the point and press the <cite>Delete</cite> key (or double click). When the cursor is over the point, it is painted in red color.</p></li>
+</ul>
+<img alt="Move polygon point." src="../_images/scene-editor-polygon-edit-points-20220623.webp" />
+<ul class="simple">
+<li><p>Add a new point: move the mouse cursor over a line. It shows a white handler under the cursor, you can drag it for creating a new point.</p></li>
+</ul>
+<img alt="Add new point." src="../_images/scene-editor-polygon-add-point-20220623.webp" />
+<img alt="Add new point." src="../_images/scene-editor-polygon-add-point-2-20220623.webp" />
+<p>The <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.GameObjects.Polygon.html">Polygon</a> code is generated by the <a class="reference external" href="../scene-editor/scene-compiler.html">scene compiler</a> using the <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.GameObjects.GameObjectFactory.html#polygon__anchor">polygon object factory</a>:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span> <span class="nx">polygon</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">.</span><span class="nx">polygon</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span> <span class="mf">10</span><span class="p">,</span> <span class="s2">&quot;0 0 20 70 100 100 80 20&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="shape-triangle-object.html" class="btn btn-neutral float-left" title="Triangle" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="container-object.html" class="btn btn-neutral float-right" title="Container objects" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022, Arian Fornaris.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67206336-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-67206336-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

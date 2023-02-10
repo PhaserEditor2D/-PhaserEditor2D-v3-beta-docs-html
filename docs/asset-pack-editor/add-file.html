@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Importing files &mdash; Phaser Editor 2D Help</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Importing using the Main toolbar" href="add-file-with-add-button.html" />
+    <link rel="prev" title="Editor content layout" href="editor-content-layout.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+            <a href="../index.html" class="icon icon-home"> Phaser Editor 2D
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v3.36.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-steps/index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Asset Pack Editor</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="create-asset-pack-file.html">Create a new Asset Pack file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asset-pack-file.html">Asset Pack File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editor-content-layout.html">Editor content layout</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Importing files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="add-file-with-add-button.html">Importing using the Main toolbar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="import-from-blocks-view.html">Importing from the Blocks view</a></li>
+<li class="toctree-l3"><a class="reference internal" href="import-from-files-view.html">Importing from the Files view</a></li>
+<li class="toctree-l3"><a class="reference internal" href="import-scripts.html">Importing JavaScript files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="public-root.html">Setting the root folder for the asset files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="organizing-the-assets.html">Organizing the Asset Pack files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outline-view.html">Outline view integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inspector-view.html">Inspector view integration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../scene-editor/index.html">Scene Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code-editor/index.html">Code Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animations-editor/index.html">Animations Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas-editor/index.html">Atlas Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pricing/index.html">License and pricing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #343131" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Phaser Editor 2D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Asset Pack Editor</a> &raquo;</li>
+      <li>Importing files</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="importing-files">
+<h1>Importing files<a class="headerlink" href="#importing-files" title="Permalink to this headline"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="add-file-with-add-button.html">Importing using the Main toolbar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="import-from-blocks-view.html">Importing from the Blocks view</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="import-from-blocks-view.html#showing-all-files-in-the-blocks-view">Showing all files in the Blocks view</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="import-from-files-view.html">Importing from the Files view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="import-scripts.html">Importing JavaScript files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="import-scripts.html#execution-order-of-the-scripts">Execution order of the scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="public-root.html">Setting the root folder for the asset files</a></li>
+</ul>
+</div>
+<p>Before you can use a file in your game, you must create a configuration entry for it in an <a class="reference external" href="../asset-pack-editor/asset-pack-file.html">Asset Pack file</a>.  This is called <strong>importing</strong> the file.</p>
+<p>You can import a file using the Asset Pack Editor’s <a class="reference external" href="add-file-with-add-button.html">Main toolbar</a> or <a class="reference external" href="import-from-blocks-view.html">Blocks view</a>,
+or using the <a class="reference external" href="import-from-files-view.html">Files view</a>.  We’ll discuss each of these in the following sections.</p>
+<p>A special section discusses the advantages of importing scripts using the <a class="reference external" href="../asset-pack-editor/asset-pack-file.html">Asset Pack file</a>: <a class="reference external" href="import-scripts.html">Importing JavaScript files</a>.</p>
+<p>You can un-import a file, removing its <a class="reference external" href="../asset-pack-editor/asset-pack-file.html">Asset Pack file</a> entry, by pressing the <code class="docutils literal notranslate"><span class="pre">Delete</span></code> key in the <a class="reference external" href="../asset-pack-editor/index.html">Asset Pack Editor</a> or the <a class="reference external" href="outline-view.html">Outline view</a>, or from their context menus.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="editor-content-layout.html" class="btn btn-neutral float-left" title="Editor content layout" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="add-file-with-add-button.html" class="btn btn-neutral float-right" title="Importing using the Main toolbar" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022, Arian Fornaris.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67206336-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-67206336-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

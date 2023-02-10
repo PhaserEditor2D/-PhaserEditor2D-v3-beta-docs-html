@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image objects &mdash; Phaser Editor 2D Help</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Sprite objects" href="sprite-object.html" />
+    <link rel="prev" title="Text property" href="text-property.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+            <a href="../index.html" class="icon icon-home"> Phaser Editor 2D
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v3.36.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-steps/index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../asset-pack-editor/index.html">Asset Pack Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Scene Editor</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="create-new-scene-file.html">Create a new Scene file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add-object.html">Adding an object to the scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inspector-view.html">Inspector view</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="game-objects.html">Game Object types</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="common-object-properties.html">Common object properties</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Image objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sprite-object.html">Sprite objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tile-sprite-object.html">Tile Sprite objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="text-object.html">Text objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitmap-text-object.html">Bitmap Text objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tilemap-object.html">Tilemap objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tilemap-layer-object.html">Tilemap Layer objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shape-object.html">Shape objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="container-object.html">Container objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layer-object.html">Layer objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="replace-object-type.html">Replacing the type of an object</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="scene-properties.html">Scene properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcade-physics.html">Arcade physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-with-parent-objects.html">Working with parent objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object-list.html">Object List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="display-list.html">Display List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prefabs.html">Prefabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-components.html">User Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation-tools.html">Manipulation tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layout-tools.html">Layout tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-compiler.html">The scene compiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../code-editor/index.html">Code Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animations-editor/index.html">Animations Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas-editor/index.html">Atlas Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pricing/index.html">License and pricing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #343131" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Phaser Editor 2D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Scene Editor</a> &raquo;</li>
+          <li><a href="game-objects.html">Game Object types</a> &raquo;</li>
+      <li>Image objects</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="image-objects">
+<h1>Image objects<a class="headerlink" href="#image-objects" title="Permalink to this headline"></a></h1>
+<p>The <a class="reference external" href="image-object.html">Image</a> is a built-in <a class="reference external" href="https://phaser.io">Phaser</a> object type: <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.GameObjects.Image.html">Phaser.GameObjects.Image</a>.</p>
+<p>You can create an <a class="reference external" href="image-object.html">Image</a> object by dropping an Image built-in type or texture from the <a class="reference external" href="blocks-view-integration.html">Blocks view</a>.</p>
+<img alt="Add image from Blocks view." src="../_images/scene-editor-drop-image-04152020.webp" />
+<p>The main difference between an <a class="reference external" href="image-object.html">Image</a> and a <a class="reference external" href="sprite-object.html">Sprite</a> is that the <a class="reference external" href="image-object.html">Image</a> objects cannot play <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.GameObjects.Sprite.html#play__anchor">sprite animations</a>.</p>
+<p>An <a class="reference external" href="image-object.html">Image</a> is created in code using the <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.GameObjects.GameObjectFactory.html#image__anchor">image factory</a>. This is how the <a class="reference external" href="scene-compiler.html">scene compiler</a> generates the code of an <a class="reference external" href="image-object.html">Image</a>:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span> <span class="nx">branch_1</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">.</span><span class="nx">image</span><span class="p">(</span><span class="mf">192</span><span class="p">,</span> <span class="mf">512</span><span class="p">,</span> <span class="s2">&quot;atlas-props&quot;</span><span class="p">,</span> <span class="s2">&quot;branch-01&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The <a class="reference external" href="image-object.html">Image</a> has properties common to other object types:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="variable-properties.html">Variable properties</a></p></li>
+<li><p><a class="reference external" href="lists-properties.html">Lists properties</a></p></li>
+<li><p><a class="reference external" href="parent-container-properties.html">Parent properties</a></p></li>
+<li><p><a class="reference external" href="transform-properties.html">Transform properties</a></p></li>
+<li><p><a class="reference external" href="origin-properties.html">Origin properties</a></p></li>
+<li><p><a class="reference external" href="flip-properties.html">Flip properties</a></p></li>
+<li><p><a class="reference external" href="visible-property.html">Visible property</a></p></li>
+<li><p><a class="reference external" href="alpha-properties.html">Alpha properties</a></p></li>
+<li><p><a class="reference external" href="texture-property.html">Texture property</a></p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="text-property.html" class="btn btn-neutral float-left" title="Text property" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sprite-object.html" class="btn btn-neutral float-right" title="Sprite objects" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022, Arian Fornaris.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67206336-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-67206336-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

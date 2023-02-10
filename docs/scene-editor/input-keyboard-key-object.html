@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keyboard Key object &mdash; Phaser Editor 2D Help</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Prefabs" href="prefabs.html" />
+    <link rel="prev" title="Input" href="input.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+            <a href="../index.html" class="icon icon-home"> Phaser Editor 2D
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v3.36.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-steps/index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../asset-pack-editor/index.html">Asset Pack Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Scene Editor</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="create-new-scene-file.html">Create a new Scene file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add-object.html">Adding an object to the scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inspector-view.html">Inspector view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game-objects.html">Game Object types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-properties.html">Scene properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcade-physics.html">Arcade physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-with-parent-objects.html">Working with parent objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object-list.html">Object List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="display-list.html">Display List</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="input.html">Input</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Keyboard Key object</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="prefabs.html">Prefabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-components.html">User Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation-tools.html">Manipulation tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layout-tools.html">Layout tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-compiler.html">The scene compiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../code-editor/index.html">Code Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animations-editor/index.html">Animations Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas-editor/index.html">Atlas Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pricing/index.html">License and pricing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #343131" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Phaser Editor 2D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Scene Editor</a> &raquo;</li>
+          <li><a href="input.html">Input</a> &raquo;</li>
+      <li>Keyboard Key object</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="keyboard-key-object">
+<h1>Keyboard Key object<a class="headerlink" href="#keyboard-key-object" title="Permalink to this headline"></a></h1>
+<p>The <a class="reference external" href="../scene-editor/index.html">Scene Editor</a> supports adding a <a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Input.Keyboard.Key">Phaser.Input.Keyboard.Key</a> object to the scene. Just drag the <strong>Keyboard.Key</strong> object from the <a class="reference external" href="../workbench/blocks-view.html">Blocks view</a> and drop it into the scene:</p>
+<img alt="Add Keyboard Key to the scene." src="../_images/scene-editor-input-add-key-20221114.webp" />
+<p>The editor shows the <strong>Key</strong> objects in the <strong>Input</strong> section of the <a class="reference external" href="../workbench/outline-view.html">Outline view</a>:</p>
+<img alt="Key objects in the Outline view." src="../_images/scene-editor-input-keys-in-outline-20221114.webp" />
+<p>Select a key for editing its properties in the <a class="reference external" href="../workbench/inspector-view.html">Inspector view</a>:</p>
+<img alt="The Keyboard Key properties." src="../_images/scene-editor-input-key-properties-20221114.webp" />
+<p>The <strong>Variable</strong> properties:</p>
+<ul class="simple">
+<li><p><strong>Name</strong>: The name of the variable for the Key object.</p></li>
+<li><p><strong>Scope</strong>: The scope of the variable. It may be <code class="docutils literal notranslate"><span class="pre">Method</span></code>, <code class="docutils literal notranslate"><span class="pre">Class</span></code>, or <code class="docutils literal notranslate"><span class="pre">Public</span></code>. If the scope is <code class="docutils literal notranslate"><span class="pre">Method</span></code>, the variable is local to the “create” method. If the scope is <code class="docutils literal notranslate"><span class="pre">Class</span></code>, the variable is asigned to a private field of the class. If the scope is <code class="docutils literal notranslate"><span class="pre">`Public`</span></code>, the variable is asigned to a public field of the class.</p></li>
+</ul>
+<p>The <strong>Keyboard Key</strong> properties:</p>
+<ul class="simple">
+<li><p><strong>Key Code</strong>: the <a class="reference external" href="https://newdocs.phaser.io/docs/3.55.2/Phaser.Input.Keyboard.Key#keyCode">keyCode</a>. Click on the button for selecting the code:</p></li>
+</ul>
+<img alt="KeyCode dialog." src="../_images/scene-editor-input-keycode-dialog-20221114.webp" />
+<p>The code generated for the key code is like this:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// in the context of a scene:</span>
+
+<span class="kd">const</span> <span class="nx">jumpKey</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">input</span><span class="p">.</span><span class="nx">keyboard</span>
+        <span class="p">.</span><span class="nx">addKey</span><span class="p">(</span><span class="nx">Phaser</span><span class="p">.</span><span class="nx">Input</span><span class="p">.</span><span class="nx">Keyboard</span><span class="p">.</span><span class="nx">KeyCodes</span><span class="p">.</span><span class="nx">UP</span><span class="p">);</span>
+
+<span class="c1">// in the context of a prefab:</span>
+
+ <span class="kd">const</span> <span class="nx">jumpKey</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">scene</span><span class="p">.</span><span class="nx">input</span><span class="p">.</span><span class="nx">keyboard</span>
+        <span class="p">.</span><span class="nx">addKey</span><span class="p">(</span><span class="nx">Phaser</span><span class="p">.</span><span class="nx">Input</span><span class="p">.</span><span class="nx">Keyboard</span><span class="p">.</span><span class="nx">KeyCodes</span><span class="p">.</span><span class="nx">UP</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>A common usage of the keys, is to assign it to a field (set the <code class="docutils literal notranslate"><span class="pre">Class</span></code> scope) and check for its <strong>down</strong> state in the <strong>update</strong> method:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">update</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">jumpKey</span><span class="p">,</span><span class="nx">isDown</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="nx">player</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">y</span> <span class="o">=</span> <span class="o">-</span><span class="mf">400</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="input.html" class="btn btn-neutral float-left" title="Input" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="prefabs.html" class="btn btn-neutral float-right" title="Prefabs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022, Arian Fornaris.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67206336-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-67206336-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

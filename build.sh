@@ -15,3 +15,4 @@ mv html docs
 rm -R docs/_sources
 rm -R docs/.doctrees
 cp _config.yml.template docs/_config.yml
+cp CNAME.template docs/CNAME

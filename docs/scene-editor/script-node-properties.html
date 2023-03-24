@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Display List &mdash; Phaser Editor 2D Help</title>
+  <title>ScriptNode’s properties &mdash; Phaser Editor 2D Help</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -20,8 +20,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Input" href="input.html" />
-    <link rel="prev" title="Object List" href="object-list.html" /> 
+    <link rel="next" title="User Components" href="user-components.html" />
+    <link rel="prev" title="Making a ScriptNode prefab" href="script-node-prefab.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -33,7 +33,7 @@
             <img src="../_static/logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v3.60.0-beta
+                v3.60.0-beta.2
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -57,9 +57,16 @@
 <li class="toctree-l2"><a class="reference internal" href="arcade-physics.html">Arcade physics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="working-with-parent-objects.html">Working with parent objects</a></li>
 <li class="toctree-l2"><a class="reference internal" href="object-list.html">Object List</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Display List</a></li>
 <li class="toctree-l2"><a class="reference internal" href="input.html">Input</a></li>
 <li class="toctree-l2"><a class="reference internal" href="prefabs.html">Prefabs</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="script-node.html">Script Nodes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="script-node-create.html">Creating a Script Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="script-node-class.html">The ScriptNode class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="script-node-basic-scripts-project.html">The Basic Scripts project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="script-node-prefab.html">Making a ScriptNode prefab</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ScriptNode’s properties</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="user-components.html">User Components</a></li>
 <li class="toctree-l2"><a class="reference internal" href="manipulation-tools.html">Manipulation tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="layout-tools.html">Layout tools</a></li>
@@ -89,7 +96,8 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="index.html">Scene Editor</a> &raquo;</li>
-      <li>Display List</li>
+          <li><a href="script-node.html">Script Nodes</a> &raquo;</li>
+      <li>ScriptNode’s properties</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -98,20 +106,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="display-list">
-<h1>Display List<a class="headerlink" href="#display-list" title="Permalink to this headline"></a></h1>
-<p>The <a class="reference internal" href="#display-list">display list</a> contains the game objects of the scenes. It is part of the  <a class="reference external" href="https://photonstorm.github.io/phaser3-docs/">Phaser API</a> (<a class="reference external" href="https://photonstorm.github.io/phaser3-docs/Phaser.GameObjects.DisplayList.html">Phaser.GameObjects.DisplayList</a>).</p>
-<p>The <a class="reference external" href="../scene-editor/index.html">Scene Editor</a> groups the game objects in a <a class="reference internal" href="#display-list">Display List</a> tree. It is shown in the <a class="reference external" href="../workbench/outline-view.html">Outline view</a>.</p>
-<img alt="Display List." src="../_images/scene-editor-display-list-04202020.webp" />
-<p>You can <a class="reference external" href="./working-with-parent-objects.html#changing-the-rendering-order-of-children">change the rendering order of the objects</a> in the Display List.</p>
+  <section id="scriptnode-s-properties">
+<h1>ScriptNode’s properties<a class="headerlink" href="#scriptnode-s-properties" title="Permalink to this headline"></a></h1>
+<p>The script node objects have no built-in properties. When you select a script node in the scene, the <a class="reference external" href="../workbench/inspector-view.html">Inspector view</a> shows a few sections related only to the editor.</p>
+<p>It is the case of the <a class="reference external" href="./variable-properties.html">Variable properties</a>. Like the game objects, a script node can be referenced by a variable, and you can set its scope to the method, the class, or declare it as a nested prefab:</p>
+<img alt="Variable section of a script node" src="../_images/script-node-variable-section-20230323.webp" />
+<p>A script node also can be added to an <a class="reference external" href="./object-list.html">Object List</a>:</p>
+<img alt="Object List section" src="../_images/scrip-node-object-list-section-20230323.webp" />
+<p>And because it could be created as a prefab instance, it shows the <a class="reference external" href="./prefab-user-properties-prefab-instance.html">Prefab Instance properties</a>:</p>
+<img alt="Prefab instance properties." src="../_images/script-node-prefab-instance-properties-20230323.webp" />
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="object-list.html" class="btn btn-neutral float-left" title="Object List" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="input.html" class="btn btn-neutral float-right" title="Input" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="script-node-prefab.html" class="btn btn-neutral float-left" title="Making a ScriptNode prefab" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="user-components.html" class="btn btn-neutral float-right" title="User Components" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

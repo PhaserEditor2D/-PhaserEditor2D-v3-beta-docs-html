@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creating a Script Node &mdash; Phaser Editor 2D Help</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/icon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="The ScriptNode class" href="script-node-class.html" />
+    <link rel="prev" title="Script Nodes" href="script-node.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #343131" >
+            <a href="../index.html" class="icon icon-home"> Phaser Editor 2D
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                v3.60.0-beta.2
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first-steps/index.html">First steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workbench/index.html">Workbench</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../asset-pack-editor/index.html">Asset Pack Editor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Scene Editor</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="create-new-scene-file.html">Create a new Scene file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add-object.html">Adding an object to the scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inspector-view.html">Inspector view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="game-objects.html">Game Object types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-properties.html">Scene properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcade-physics.html">Arcade physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="working-with-parent-objects.html">Working with parent objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object-list.html">Object List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prefabs.html">Prefabs</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="script-node.html">Script Nodes</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Creating a Script Node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#browsing-the-script-nodes">Browsing the Script Nodes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#code-generation-of-the-creation-of-a-script">Code generation of the creation of a script</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="script-node-class.html">The ScriptNode class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="script-node-basic-scripts-project.html">The Basic Scripts project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="script-node-prefab.html">Making a ScriptNode prefab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="script-node-properties.html">ScriptNode’s properties</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="user-components.html">User Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manipulation-tools.html">Manipulation tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layout-tools.html">Layout tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scene-compiler.html">The scene compiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../code-editor/index.html">Code Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animations-editor/index.html">Animations Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlas-editor/index.html">Atlas Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/index.html">Miscellaneous</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pricing/index.html">License and pricing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #343131" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Phaser Editor 2D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Scene Editor</a> &raquo;</li>
+          <li><a href="script-node.html">Script Nodes</a> &raquo;</li>
+      <li>Creating a Script Node</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="creating-a-script-node">
+<h1>Creating a Script Node<a class="headerlink" href="#creating-a-script-node" title="Permalink to this headline"></a></h1>
+<p>A <a class="reference external" href="../scene-editor/script-node.html">ScriptNode</a> object shares a lot with the game objects, you can add it to the scene by dragging it from the <a class="reference external" href="../workbench/blocks-view.html">Blocks view</a> and dropping it on the scene:</p>
+<img alt="Create script node from the blocks view." src="../_images/script-node-create-1-20230322.webp" />
+<p>That action creates an instance of the <a class="reference external" href="./script-node-class.html">ScriptNode class</a> and adds it to the object selected in the scene. If no object is selected, then it adds the script node to the scene.</p>
+<p>In addition to an instance of the <a class="reference external" href="./script-node-class.html">ScriptNode class</a>, you can add an instance of a <a class="reference external" href="./script-node-prefab.html">ScriptNode prefab</a>. The script node prefabs are shown next to the other prefabs in the <a class="reference external" href="../workbench/blocks-view.html">Blocks view</a>:</p>
+<img alt="Script Node prefabs in the Blocks view." src="../_images/script-node-prefab-in-blocks-view.webp" />
+<p>another way of adding a script node is by selecting the <strong>Add Script</strong> option in the <strong>Script</strong> context menu. It is also available as a command (<code class="docutils literal notranslate"><span class="pre">U</span></code>).</p>
+<img alt="Add Script command." src="../_images/script-node-add-script-command.webp" />
+<p>It opens the <strong>Add Script</strong> dialog. There you can select the script you want to add:</p>
+<img alt="The Add Script dialog." src="../_images/script-node-add-script-dialog.webp" />
+<section id="browsing-the-script-nodes">
+<h2>Browsing the Script Nodes<a class="headerlink" href="#browsing-the-script-nodes" title="Permalink to this headline"></a></h2>
+<p>The <a class="reference external" href="../scene-editor/script-node.html">script nodes</a> are displayed in the <a class="reference external" href="../workbench/outline-view.html">Outline view</a>, below the parent object, or the scene:</p>
+<img alt="Script nodes in the outline view." src="../_images/script-node-outline-20230322.webp" />
+<p>Also, you can browse the scripts of an object by pressing the command <code class="docutils literal notranslate"><span class="pre">Shift+U</span></code>. The command is also available in the <strong>Script</strong> section of the context menu. That command opens the <strong>Browse Scripts</strong> dialog:</p>
+<img alt="Browsing the script nodes." src="../_images/script-node-browse-scripts-20230322.webp" />
+</section>
+<section id="code-generation-of-the-creation-of-a-script">
+<h2>Code generation of the creation of a script<a class="headerlink" href="#code-generation-of-the-creation-of-a-script" title="Permalink to this headline"></a></h2>
+<p>When you add a <a class="reference external" href="../scene-editor/script-node.html">ScriptNode</a> to an object, it generates a code like this:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">editorCreate</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// btn</span>
+    <span class="kd">const</span> <span class="nx">btn</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">.</span><span class="nx">image</span><span class="p">(</span><span class="mf">359</span><span class="p">,</span> <span class="mf">223</span><span class="p">,</span> <span class="s2">&quot;ui&quot;</span><span class="p">,</span> <span class="s2">&quot;btn.png&quot;</span><span class="p">);</span>
+
+    <span class="c1">// onPointerDownScript</span>
+    <span class="ow">new</span> <span class="nx">OnPointerDownScript</span><span class="p">(</span><span class="nx">btn</span><span class="p">);</span>
+    <span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>It is the code generated by the <a class="reference external" href="../scene-editor/scene-compiler.html">scene compiler</a> when you add a script node prefab. If you add an instance of the built-in ScriptNode, the code is similar, but using the <a class="reference external" href="./script-node-class.html">ScriptNode class</a>:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">editorCreate</span><span class="p">()</span> <span class="p">{</span>
+
+  <span class="c1">// btn</span>
+  <span class="kd">const</span> <span class="nx">btn</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">.</span><span class="nx">image</span><span class="p">(</span><span class="mf">359</span><span class="p">,</span> <span class="mf">223</span><span class="p">,</span> <span class="s2">&quot;ui&quot;</span><span class="p">,</span> <span class="s2">&quot;btn.png&quot;</span><span class="p">);</span>
+
+  <span class="c1">// scriptnode_1</span>
+  <span class="ow">new</span> <span class="nx">ScriptNode</span><span class="p">(</span><span class="nx">btn</span><span class="p">);</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The <strong>ScriptNode</strong> class is not part of <a class="reference external" href="https://phaser.io"><a href="#id1"><span class="problematic" id="id2">|Phaser|_</span></a></a>, but it could be generated by Phaser Editor 2D. The next section is about it.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="script-node.html" class="btn btn-neutral float-left" title="Script Nodes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="script-node-class.html" class="btn btn-neutral float-right" title="The ScriptNode class" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022, Arian Fornaris.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67206336-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-67206336-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

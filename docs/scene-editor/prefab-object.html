@@ -33,7 +33,7 @@
             <img src="../_static/logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v3.60.0-beta
+                v3.60.0-beta.2
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -57,7 +57,6 @@
 <li class="toctree-l2"><a class="reference internal" href="arcade-physics.html">Arcade physics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="working-with-parent-objects.html">Working with parent objects</a></li>
 <li class="toctree-l2"><a class="reference internal" href="object-list.html">Object List</a></li>
-<li class="toctree-l2"><a class="reference internal" href="display-list.html">Display List</a></li>
 <li class="toctree-l2"><a class="reference internal" href="input.html">Input</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="prefabs.html">Prefabs</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="prefab-new-file.html">Creating a prefab file</a></li>
@@ -75,6 +74,7 @@
 <li class="toctree-l3"><a class="reference internal" href="prefab-black-box.html">Using a prefab as a black box</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="script-node.html">Script Nodes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="user-components.html">User Components</a></li>
 <li class="toctree-l2"><a class="reference internal" href="manipulation-tools.html">Manipulation tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="layout-tools.html">Layout tools</a></li>
@@ -116,11 +116,11 @@
              
   <section id="the-prefab-object">
 <h1>The prefab object<a class="headerlink" href="#the-prefab-object" title="Permalink to this headline"></a></h1>
-<p>The <a class="reference external" href="prefab-object.html">prefab object</a> is the object at the top of the <a class="reference external" href="../scene-editor/prefabs.html">prefab</a> file. You can add many objects to the <a class="reference external" href="display-list.html">display list</a> of the <a class="reference external" href="../scene-editor/prefabs.html">prefab</a>, but only the one at the top will be considered as the real <a class="reference external" href="../scene-editor/prefabs.html">prefab</a>, the other objects will be ignored.</p>
+<p>The <a class="reference external" href="prefab-object.html">prefab object</a> is the object at the top of the <a class="reference external" href="../scene-editor/prefabs.html">prefab</a> file. You can add many objects to the scene, but only the one at the top will be considered as the real <a class="reference external" href="../scene-editor/prefabs.html">prefab</a>, the other objects will be ignored.</p>
 <p>We did it this way for simplicity, but it also allows us to create different versions of the <a class="reference external" href="prefab-object.html">prefab object</a> and move them to the top of the list in case we want to promote a different object as the <a class="reference external" href="prefab-object.html">prefab object</a>.</p>
 <p>Look in the next image, it shows the <strong>Dragon</strong> prefab. There are three objects in the file, but only the <strong>green dragon</strong> object will be used as the <a class="reference external" href="prefab-object.html">prefab object</a> of the <strong>Dragon</strong> <a class="reference external" href="../scene-editor/prefabs.html">prefab</a>. Also, look the others, non-top objects are rendered transparent in the <a class="reference external" href="../workbench/outline-view.html">Outline view</a>:</p>
 <img alt="Prefab object" src="../_images/scene-editor-prefab-object-1-06272020.webp" />
-<p>If later you decided to use a different dragon for your <a class="reference external" href="../scene-editor/prefabs.html">prefab</a>, then you can move it to the top of the <a class="reference external" href="display-list.html">display list</a> and that’s all:</p>
+<p>If later you decided to use a different dragon for your <a class="reference external" href="../scene-editor/prefabs.html">prefab</a>, then you can move it to the top of the scene and that’s all:</p>
 <img alt="Another prefab object" src="../_images/scene-editor-prefab-object-2-06272020.webp" />
 <p>Another characteristic of the <a class="reference external" href="prefab-object.html">prefab object</a> is that you cannot edit its <a class="reference external" href="variable-properties.html">Variable properties</a>, because, in the generated code, it is not referenced as a variable, it is referenced as <code class="docutils literal notranslate"><span class="pre">this</span></code>.</p>
 <p>The <a class="reference external" href="prefab-object.html">prefab object</a> could be any object of any type (an <a class="reference external" href="image-object.html">image</a>, a <a class="reference external" href="text-object.html">text</a>, a <a class="reference external" href="container-object.html">container</a>, whatever type supported by the <a class="reference external" href="../scene-editor/index.html">Scene Editor</a>), even, it could be a <a class="reference external" href="../scene-editor/prefab-create-instance.html">prefab instance</a>. When the <a class="reference external" href="prefab-object.html">prefab object</a> is a <a class="reference external" href="../scene-editor/prefab-create-instance.html">prefab instance</a> (of the <a class="reference external" href="../scene-editor/prefabs.html">prefab</a> <strong>SomePrefab</strong>) then we say it is a <a class="reference external" href="../scene-editor/prefab-variant.html">prefab variant</a> of the <strong>SomePrefab</strong> <a class="reference external" href="../scene-editor/prefabs.html">prefab</a>.</p>
